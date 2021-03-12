@@ -4,26 +4,58 @@
     <meta charset="utf8" />
     <title>Handla — Eco-Conscious Grocery Shopping List</title>
     <style>
-      html, body { margin: 0; }
+      html, body { margin: 0; padding-bottom: 48px; }
+      body {
+        background-color: #fff;
+      }
       .hero {
         background: url('/gfx/header.jpg') no-repeat top center;
         background-size: cover;
+        padding-top: 81%;
+        position: relative;
       }
-      h1 { margin: auto; }
+      .wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        background: url('/gfx/handla.svg');
+        margin: auto;
+        width: 454px;
+        height: 185px;
+        text-indent: 9999px;
+      }
+      .bend {
+        position: absolute;
+        bottom: -1px;
+        height: auto;
+        width: 100vw;
+      }
+      footer {
+        text-align: center;
+        font: 0.5em 'Helvetica Neue', Helvetica, sans-serif;
+        font: -apple-system-footnote;
+      }
     </style>
   </head>
   <body>
     <header class="hero">
-      <h1>Handla</h1>
-      <img src="gfx/icon.png" alt="Handla app icon, a shopping bag on a yellow background" />
-
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440px" height="64px" viewBox="0 0 1440 64" version="1.1">
+      <div class="wrapper">
+        <h1>Handla</h1>
+        <img src="gfx/handla-icon.png" alt="Handla app icon, a shopping bag on a yellow background" width="280" height="280" />
+        <p class="vignette">Coming 2021</p>
+        <h2>Eco-Conscious Grocery Shopping List</h2>
+      </div>
+      <svg class="bend" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440px" height="64px" viewBox="0 0 1440 64" version="1.1">
         <g id="bend" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M1440,0 L1440,64 L0,64 L0,0 L7.19014876,0.9751 C244.468342,32.9917 482.071625,49 720,49 C957.928375,49 1195.53166,32.9917 1432.80985,0.9751 L1440,0 Z" id="Path" fill="#FF00FF" fill-rule="nonzero"/>
+        <path d="M1440,0 L1440,64 L0,64 L0,0 L7.19014876,0.9751 C244.468342,32.9917 482.071625,49 720,49 C957.928375,49 1195.53166,32.9917 1432.80985,0.9751 L1440,0 Z" id="Path" fill="#ffffff" fill-rule="nonzero"/>
         </g>
       </svg>
     </header>
     <footer>
+      <img src="/gfx/plantry.svg" alt="Plantry" width="312" height="122" />
       <div class="copyright-notice">
         <p>
           © 2021 Filibaba AB
