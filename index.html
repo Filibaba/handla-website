@@ -9,34 +9,48 @@
         background-color: #fff;
       }
       .hero {
-        background: url('/gfx/header.jpg') no-repeat top center;
+        background: url('/gfx/header.jpg') no-repeat center center;
         background-size: cover;
         padding-top: 81%;
         position: relative;
       }
       .wrapper {
         position: absolute;
+        text-align: center;
         top: 0;
         width: 100%;
-        text-align: center;
       }
       h1 {
-        background: url('/gfx/handla.svg');
-        margin: auto;
-        width: 454px;
-        height: 185px;
+        background: url('/gfx/handla.svg') center center no-repeat;
+        background-size: contain;
+        padding-bottom: 10%;
+        margin: 2vw auto 9vw auto;
         text-indent: 9999px;
+        width: 31.5vw;
+      }
+      .icon {
+        height: 20vw;
+        width: 20vw;
+        margin-bottom: 6vw;
+      }
+      .vignette {
+        font: 2.5vw -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+        margin: 0;
+      }
+      h2 {
+        font: bold 3vw -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+        margin: 0;
       }
       .bend {
-        position: absolute;
         bottom: -1px;
         height: auto;
+        position: absolute;
         width: 100vw;
       }
       footer {
-        text-align: center;
-        font: 0.5em 'Helvetica Neue', Helvetica, sans-serif;
         font: -apple-system-footnote;
+        font: 0.5em 'Helvetica Neue', Helvetica, sans-serif;
+        text-align: center;
       }
     </style>
   </head>
@@ -44,7 +58,7 @@
     <header class="hero">
       <div class="wrapper">
         <h1>Handla</h1>
-        <img src="gfx/handla-icon.png" alt="Handla app icon, a shopping bag on a yellow background" width="280" height="280" />
+        <img class="icon" src="gfx/handla-icon.png" alt="Handla app icon, a shopping bag on a yellow background" width="280" height="280" />
         <p class="vignette">Coming 2021</p>
         <h2>Eco-Conscious Grocery Shopping List</h2>
       </div>
@@ -55,7 +69,10 @@
       </svg>
     </header>
     <footer>
-      <img src="/gfx/plantry.svg" alt="Plantry" width="312" height="122" />
+      <div>
+        <p>From the creators of</p>
+        <img src="/gfx/plantry.svg" alt="Plantry" width="312" height="122" />
+      </div>
       <div class="copyright-notice">
         <p>
           © 2021 Filibaba AB
