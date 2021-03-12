@@ -4,7 +4,11 @@
     <meta charset="utf8" />
     <title>Handla — Eco-Conscious Grocery Shopping List</title>
     <style>
-      html, body { margin: 0; padding-bottom: 48px; }
+      html, body {
+        margin: 0;
+        padding-bottom: 48px;
+        color: #000;
+      }
       body {
         background-color: #fff;
       }
@@ -49,8 +53,31 @@
       }
       footer {
         font: -apple-system-footnote;
-        font: 0.5em 'Helvetica Neue', Helvetica, sans-serif;
+        font: 0.8em 'Helvetica Neue', Helvetica, sans-serif;
         text-align: center;
+        color: #7f7f7f;
+      }
+      .plantry {
+        background: url('/gfx/plantry.svg') center center no-repeat;
+        background-size: contain;
+        width: 312px;
+        height: 122px;
+        text-indent: 99999px;
+        margin: auto;
+      }
+      .makers {
+        font-variant: small-caps;
+        letter-spacing: 5px;
+        position: relative;
+        top: 35px;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #000; }
+        .wrapper { color: #fff; }
+        h1 { background-image: url('/gfx/handla-dark.svg'); }
+        .bend path { fill: #000; }
+        .hero { background-image: url('/gfx/header-dark.jpg'); }
+        .plantry { background-image: url('/gfx/plantry-dark.svg'); }
       }
     </style>
   </head>
@@ -70,8 +97,8 @@
     </header>
     <footer>
       <div>
-        <p>From the creators of</p>
-        <img src="/gfx/plantry.svg" alt="Plantry" width="312" height="122" />
+        <p class="makers">from the makers of</p>
+        <div class="plantry">Plantry</div>
       </div>
       <div class="copyright-notice">
         <p>
