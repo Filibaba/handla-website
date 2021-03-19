@@ -51,6 +51,21 @@
         font: bold 2.8vw -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
         margin: 0;
       }
+      .tagline {
+        display: inline;
+        position: relative;
+      }
+      .tagline span {
+        position: absolute;
+        top: 1em;
+        right: 0;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+      .tagline span:first-child { position: relative; }
+      .tagline span.active { top: 0; opacity: 1; }
+      .tagline span.goingAway { top: -1.5em; opacity: 0; }
+
       .bend {
         bottom: -1px;
         height: auto;
@@ -87,16 +102,16 @@
         .vignette { font-size: 1.8em; }
         h2 { font-size: 2.5em; }
       }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .hero { background-image: url('/gfx/header@2x.jpg'); }
       }
-      @media (min-width: 1441px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      @media (min-width: 1441px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .hero { background-image: url('/gfx/header@3x.jpg'); }
       }
-      @media (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2), (prefers-color-scheme: dark) and (min-resolution: 192dpi) { 
+      @media (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2), (prefers-color-scheme: dark) and (min-resolution: 192dpi) {
         .hero { background-image: url('/gfx/header-dark@2x.jpg'); }
       }
-      @media (prefers-color-scheme: dark) and (min-width: 1441px),(prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2),(prefers-color-scheme: dark) and (min-resolution: 192dpi) { 
+      @media (prefers-color-scheme: dark) and (min-width: 1441px),(prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2),(prefers-color-scheme: dark) and (min-resolution: 192dpi) {
         .hero { background-image: url('/gfx/header-dark@3x.jpg'); }
       }
     </style>
@@ -122,7 +137,14 @@
         <img class="icon" src="gfx/handla-icon.png" alt="Handla app icon, a shopping bag on a yellow background" width="280" height="280" />
         <div>
           <p class="vignette">Coming 2021</p>
-          <h2>Eco-Conscious Grocery Shopping List</h2>
+          <h2>
+            <div class="tagline">
+              <span class="active">Eco-Conscious</span>
+              <span>Streamlined&nbsp;</span>
+              <span>Pesonalized&nbsp;</span>
+              <span>Easy-To-Use&nbsp;</span>
+            </div>Grocery Shopping List
+          </h2>
         </div>
       </div>
       <svg class="bend" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440px" height="64px" viewBox="0 0 1440 64" version="1.1">
@@ -159,5 +181,19 @@
         </p>
       </div>
     </footer>
+    <script>
+      function animateHeader() {
+        const delay = 2;
+        const words = Array.from(document.querySelectorAll('.tagline span'));
+        setInterval(() => {
+          words[0].classList.remove('active');
+          words[0].classList.add('goingAway');
+          words[1].classList.add('active');
+          words[words.length - 1].classList.remove('goingAway');
+          words.push(words.splice(0, 1)[0]);
+        }, delay * 1000);
+      }
+      animateHeader();
+    </script>
   </body>
 </html>
