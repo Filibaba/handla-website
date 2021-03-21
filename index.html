@@ -60,7 +60,7 @@
         top: 1em;
         right: 0;
         opacity: 0;
-        transition: all 0.3s ease-out;
+        transition: all 0.3s ease-in-out;
       }
       .tagline span:first-child { position: relative; }
       .tagline span.active { top: 0; opacity: 1; }
@@ -102,10 +102,10 @@
         .vignette { font-size: 1.8em; }
         h2 { font-size: 2.5em; }
       }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      @media (-webkit-min-device-pixel-ratio: 2) {
         .hero { background-image: url('/gfx/header@2x.jpg'); }
       }
-      @media (min-width: 1441px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      @media (min-width: 1441px), (-webkit-min-device-pixel-ratio: 2) {
         .hero { background-image: url('/gfx/header@3x.jpg'); }
       }
       @media (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2), (prefers-color-scheme: dark) and (min-resolution: 192dpi) {
