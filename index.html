@@ -39,9 +39,9 @@
       .icon {
         height: 20vw;
         width: 20vw;
-        max-width: 200px;
-        max-height: 200px;
-        margin: 5vw auto;
+        max-width: 281px;
+        max-height: 281px;
+        margin: 10vw auto;
       }
       .vignette {
         font: 1.8vw -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
@@ -99,8 +99,13 @@
         .plantry path { fill: #fff; }
       }
       @media screen and (min-width: 1420px) {
-        .vignette { font-size: 1.8em; }
-        h2 { font-size: 2.5em; }
+        .vignette { font-size: 2.5em; }
+        h2 { font-size: 4em; }
+      }
+      @media screen and (min-width: 2000px) {
+	      .icon {
+	        margin: 8vw auto;
+	      }
       }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .hero { background-image: url('gfx/header@2x.jpg'); }
