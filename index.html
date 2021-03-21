@@ -9,7 +9,7 @@
     <style>
       html, body {
         margin: 0;
-        padding-bottom: 48px;
+        padding-bottom: 40px;
         color: #000;
       }
       body {
@@ -37,21 +37,25 @@
         width: 31.5vw;
         overflow: hidden;
         max-width: 454px;
+        min-width: 272px;
       }
       .icon {
         height: 20vw;
         width: 20vw;
         max-width: 280px;
         max-height: 280px;
+        min-width: 164px;
+        min-height: 164px;
         margin: 10vw auto;
+        padding-bottom: 1em;
       }
       .vignette {
-        font: 1.8vw -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+        font: 1.8em -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
         margin: 0 0 1vw 0;
       }
       h2 {
-        font: bold 2.8vw -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
-        margin: 0;
+        font: bold 3em -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+        margin: 0 4vw;
       }
       .tagline {
         display: inline;
@@ -100,14 +104,22 @@
         .hero { background-image: url('gfx/header-dark.jpg'); }
         .plantry path { fill: #fff; }
       }
+      @media screen and (max-width: 320px) {
+        .vignette { font-size: 1.2em; }
+        h2 { font-size: 1.6em; }
+		.icon { padding-bottom: 3em; min-width: 120px; min-height: 120px;}
+	  }
+      @media screen and (min-width: 321px) and (max-width: 580px) {
+        .vignette { font-size: 1.2em; }
+        h2 { font-size: 2em; }
+		.icon { padding-bottom: 4em; }
+	  }
       @media screen and (min-width: 1420px) {
         .vignette { font-size: 2.5em; }
         h2 { font-size: 4em; }
       }
-      @media screen and (min-width: 2000px) {
-	      .icon {
-	        margin: 8vw auto;
-	      }
+      @media screen and (min-width: 1900px) {
+        .icon { margin: 8vw auto;}
       }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .hero { background-image: url('gfx/header@2x.jpg'); }
