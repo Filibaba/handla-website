@@ -144,10 +144,10 @@
       @media screen and (min-width: 1900px) {
         .icon { margin: 10vh auto;}
       }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 429px), (min-resolution: 192dpi) and (min-width: 429px) {
         .hero { background-image: url('gfx/header@2x.jpg'); }
       }
-      @media (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2), (prefers-color-scheme: dark) and (min-resolution: 192dpi) {
+      @media (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 429px), (prefers-color-scheme: dark) and (min-resolution: 192dpi) and (min-width: 429px) {
         .hero { background-image: url('gfx/header-dark@2x.jpg'); }
       }
     </style>
