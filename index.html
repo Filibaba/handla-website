@@ -17,197 +17,9 @@
     <meta name="twitter:site" content="@GetHandla">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://handlagrocerylist.app/gfx/social-large.png">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="gfx/handla-favicon.png">
     <link rel="apple-touch-icon" href="gfx/handla-favicon.png">
-    <style>
-      html, body {
-        margin: 0;
-        padding-bottom: 32px;
-        color: #000;
-        font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
-      }
-      body {
-        background-color: #fff;
-      }
-      .hero {
-        background: url('gfx/header.jpg') no-repeat center center;
-        background-size: cover;
-        height: 95vh;
-        position: relative;
-        overflow: hidden;
-      }
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 95%;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .handla path { fill: #000; }
-      .handla {
-        margin: 0px;
-        width: 31.5vw;
-        overflow: hidden;
-        max-width: 454px;
-        min-width: 272px;
-        min-height: 111px;
-      }
-      .icon {
-        height: 20vw;
-        width: 20vw;
-        max-width: 280px;
-        max-height: 280px;
-        min-width: 164px;
-        min-height: 164px;
-        margin: 7vh auto;
-        padding-bottom: 2em;
-      }
-      .icon-img{
-        width: 100%;
-        height: auto;
-      }
-      .vignette {
-        font-size: 1.8em;
-        margin: 0 0 1vw 0;
-      }
-      h2 {
-        font-weight: bold;
-        font-size: 3em;
-        margin: 0 4vw;
-      }
-      .tagline {
-        display: inline;
-        position: relative;
-      }
-      .tagline span {
-        position: absolute;
-        top: 1.25em;
-        right: 0;
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-      }
-      .tagline span:first-child { position: relative; }
-      .tagline span.active { top: 0; opacity: 1; }
-      .tagline span.goingAway { top: -1em; opacity: 0; }
-      
-      .button {
-	      display: inline-block;
-	      height: 64px;
-	      line-height: 64px;
-	      width: 334px;
-	      border-radius: 32px;
-  	      font-size: 1.375em;
-	      font-weight: 600;
-	      text-decoration: none;
-	      text-align: center;
-		  transition: 0.35s;
-      }
-
-      .button-primary {
-	      margin-top: 40px;
-	      color: white;
-	      background-color: black;
-      }
-      
-      .button-secondary {
-	      margin-top: 16px;
-	      color: black;
-	      background-color: white;
-	      box-shadow:0 1px 3px rgba(0, 0, 0, 0.16);
-      }
-      
-      .button-primary:hover {
-		  background-color: #676772;		  
-	      box-shadow:0 1px 3px rgba(0, 0, 0, 0.32);
-	  }
-		
-      .button-secondary:hover {
-		  background-color: rgba(120, 120, 128, 0.16);
-  	      box-shadow:none;
-	  }
-
-      .bend {
-        bottom: -1px;
-        height: auto;
-        position: absolute;
-        width: 102vw;
-        left: -1vw;
-      }
-      footer {
-        font: -apple-system-footnote;
-        font-size: 0,6875em;
-        text-align: center;
-        color: #7f7f7f;
-      }
-      
-      .copyright-notice {
-        margin-left: 22vw;
-        margin-right: 22vw;
-      }
-      
-      .plantry {
-        width: 312px;
-        height: 122px;
-        margin: auto;
-      }
-      .makers {
-        font-variant: small-caps;
-        letter-spacing: 5.5px;
-        position: relative;
-        top: 35px;
-      }
-      @media (prefers-color-scheme: dark) {
-        body { background: #000; }
-        .wrapper { color: #fff; }
-        .handla path { fill: #fff; filter: url(#shadow) }
-        .bend path { fill: #000; }
-        .hero { background-image: url('gfx/header-dark.jpg'); }
-        .plantry path { fill: #fff; }
-        .button-primary {color: black; background-color: white;}
-        .button-secondary {color: white; background-color: black; box-shadow: none;}
-	    .button-primary:hover { background-color: rgba(255, 255, 255, 0.6); }
-		.button-secondary:hover { background-color: #242426;}
-      }
-      @media screen and (max-height: 567px) {
-        .hero {height: 200vh;}
-  	  }
-      @media screen and (max-width: 1538px) {
-  		.button { height: 50px; line-height: 50px; width: 264px; border-radius: 25px; font-size: 1.0625em;}
-  	    .button-primary { margin-top: 24px;}
-	    .button-secondary { margin-top: 12px;}
-      }	 
-      @media screen and (max-width: 320px) {
-        .vignette { font-size: 1.2em; }
-        h2 { font-size: 1.6em; }
-		.icon { margin: 3vh auto; padding-bottom: 3em; min-width: 120px; min-height: 120px;}
-	    .button-primary { margin-top: 16px;}
-	    .button-secondary { margin-top: 8px;}
-	  }
-      @media screen and (min-width: 321px) and (max-width: 580px) {
-        .vignette { font-size: 1.2em; }
-        h2 { font-size: 1.8em; }
-        .handla { padding-top: 2vh;}
-  		.icon { margin: 3vh auto; padding-bottom: 4em; }
-  		.hero {height: 100vh;}
-	  } 
-      @media screen and (min-width: 1538px) {
-        .vignette { font-size: 2.5em; }
-        h2 { font-size: 4em; }
-        .handla { padding-top: 8vh;}
-      }
-      @media screen and (min-width: 1900px) {
-	    .handla { padding-top: 4vh;}
-        .icon { margin: 9vh auto;}
-      }
-      @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 429px), (min-resolution: 192dpi) and (min-width: 429px) {
-        .hero { background-image: url('gfx/header@2x.jpg'); }
-      }
-      @media (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 429px), (prefers-color-scheme: dark) and (min-resolution: 192dpi) and (min-width: 429px) {
-        .hero { background-image: url('gfx/header-dark@2x.jpg'); }
-      }
-    </style>
   </head>
   <body>
     <header class="hero">
@@ -227,7 +39,12 @@
           </g>
           </g>
         </svg>
-        <div class="icon"><img class="icon-img" src="gfx/handla-icon.png" srcset="gfx/handla-icon@2x.png 2x, gfx/handla-icon@3x.png 3x" alt="Handla app icon, a shopping bag on a yellow background" width="280" height="280" /></div>
+        <div class="hero-iphone">
+          <video class="video" autoplay muted loop playsinline>
+          <source src="video/web-EN-small.mp4" width="265" height="696" type="video/mp4" media="(max-width:480px)">
+  				<source src="video/web-EN-medium.mp4" width="265" height="696" type="video/mp4"/>
+  				</video>
+        </div>
         <div>
           <p class="vignette">Coming to iPhone & iPad in Mid-2021</p>
           <h2>
@@ -272,7 +89,8 @@
           © 2021 Filibaba AB
         </p>
         <p>
-          Plantry and Filibaba are trademarks of Filibaba AB, registered in the EU.
+          Apple, the Apple logo, iPad, iPhone, and iPod touch are trademarks of Apple Inc., registered in the U.S. and
+        other countries. App Store is a service mark of Apple Inc. Plantry and Filibaba are trademarks of Filibaba AB, registered in the EU.
         </p>
       </div>
     </footer>
