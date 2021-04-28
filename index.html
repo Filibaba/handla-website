@@ -39,7 +39,7 @@
           </g>
           </g>
         </svg>
-        <div class="hero-iphone">
+        <div class="hero-iphone rellax" data-rellax-speed="1.5">
           <video class="video" autoplay muted loop playsinline>
           <source src="video/web-EN-small.mp4" width="265" height="696" type="video/mp4" media="(max-width:480px)">
   				<source src="video/web-EN-medium.mp4" width="265" height="696" type="video/mp4"/>
@@ -107,6 +107,19 @@
         }, delay * 1000);
       }
       animateHeader();
+    </script>
+    
+    <script type="text/javascript" src="rellax.min.js"></script>
+    <script>
+      if (window.innerWidth > 1366) {
+    	var rellax = new Rellax('.rellax', {
+        // center: true
+        callback: function(position) {
+            // callback every position change
+            console.log(position);
+        }
+      });
+      }
     </script>
   </body>
 </html>

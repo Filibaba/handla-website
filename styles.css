@@ -14,7 +14,6 @@
     position: relative;
     overflow: hidden;
   }
-  
 	.hero-iphone {
 	  margin-top: 50px;
 	  margin-bottom: 80px;
@@ -25,7 +24,6 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
-	
 	.video {
 	  height: 697px;
 	  width: 265px;
@@ -33,7 +31,6 @@
 	  margin-right: 20.8px;
 	  border-radius: 280px 40px 40px 280px/55px 40px 40px 55px;
   }
-
   .wrapper {
     display: flex;
     flex-direction: column;
