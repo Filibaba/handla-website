@@ -31,6 +31,9 @@
 	  margin-right: 20.8px;
 	  border-radius: 280px 40px 40px 280px/55px 40px 40px 55px;
   }
+  .dark-video {
+    display: none;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -143,6 +146,13 @@
     .wrapper { color: #fff; }
     .bend path { fill: #000; }
     .hero { background-image: url('gfx/header-dark.jpg'); }
+    .dark-video {
+      display: inline;
+    }
+
+    .light-video {
+      display: none;
+    }
     .plantry path { fill: #fff; }
     .button-primary {color: black; background-color: white;}
     .button-secondary {color: white; background-color: black; box-shadow: none;}
