@@ -3,6 +3,10 @@
     padding-bottom: 32px;
     color: #000;
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    
   }
   body {
     background-color: #E9EAF0;
@@ -107,6 +111,10 @@
   .button-secondary:hover {
 	  background-color: rgba(120, 120, 128, 0.16);
     box-shadow:none;
+  }
+  
+  .cards {
+    
   }
 
   .bend {
