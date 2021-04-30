@@ -5,18 +5,14 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
   }
   body {
-    background-color: #E9EAF0;
-  }
-  .header {
+    background-color: #fff;
   }
   .hero {
-    z-index: 0;
     background: url('gfx/header.jpg') no-repeat center center;
     background-size: cover;
-    position: absolute;
-    width: 100vw;
-    overflow: visible;
-    min-height: 130vh;
+    min-height: 95vh;
+    position: relative;
+    overflow: hidden;
   }
 	.hero-iphone {
 	  margin-top: 60px;
@@ -38,11 +34,12 @@
   .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 95vh;
+    min-height: 95%;
     justify-content: center;
     align-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 160px;
   }
   .handla-logo {
     margin-top: 60px;
@@ -74,63 +71,53 @@
   .tagline span.goingAway { top: -1em; opacity: 0; }
   
   .button {
-    display: inline-block;
-    height: 64px;
-    line-height: 64px;
-    width: 334px;
-    border-radius: 32px;
-    font-size: 1.375em;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
+      display: inline-block;
+      height: 64px;
+      line-height: 64px;
+      width: 334px;
+      border-radius: 32px;
+	      font-size: 1.375em;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
 	  transition: 0.35s;
   }
 
   .button-primary {
-    margin-top: 40px;
-    color: white;
-    background-color: black;
+      margin-top: 40px;
+      color: white;
+      background-color: black;
   }
   
   .button-secondary {
-    margin-top: 16px;
-    color: black;
-    background-color: white;
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.16);
+      margin-top: 16px;
+      color: black;
+      background-color: white;
+      box-shadow:0 1px 3px rgba(0, 0, 0, 0.16);
   }
   
   .button-primary:hover {
 	  background-color: #676772;		  
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.32);
+      box-shadow:0 1px 3px rgba(0, 0, 0, 0.32);
   }
 	
   .button-secondary:hover {
 	  background-color: rgba(120, 120, 128, 0.16);
-    box-shadow:none;
+	      box-shadow:none;
   }
 
   .bend {
     bottom: -1px;
     height: auto;
-    position: relative;
+    position: absolute;
     width: 102vw;
     left: -1vw;
   }
-  
-  .bend-container {
-    width: 100vw;
-    overflow: hidden;
-    height: auto;
-  }
-  
   footer {
-    border: 1px solid white;
     font: -apple-system-footnote;
     font-size: 0,6875em;
     text-align: center;
     color: #7f7f7f;
-    background-color: #fff;
-    padding-bottom: 80px;
   }
   
   .copyright-notice {
@@ -152,7 +139,7 @@
   
   /* Dark Mode */
   @media (prefers-color-scheme: dark) {
-    body { background: #1A1B20; }
+    body { background: #000; }
     .wrapper { color: #fff; }
     .bend path { fill: #000; }
     .hero { background-image: url('gfx/header-dark.jpg'); }
@@ -165,7 +152,6 @@
     .handla-logo {  
       -webkit-filter: invert(1) drop-shadow( 0 0 32px rgba(0, 0, 0, 1));
       filter: invert(1)  drop-shadow( 0 0 32px rgba(0, 0, 0, 1));}
-    footer { background-color: #000; border: 1px solid #000; }
   )
   
   }
@@ -180,8 +166,6 @@
 		.button { height: 50px; line-height: 50px; width: 264px; border-radius: 25px; font-size: 1.0625em;}
 	    .button-primary { margin-top: 24px;}
     .button-secondary { margin-top: 12px;}
-    
-    .hero {min-height: 100vh;}
     
     .hero-iphone {()
       margin-top: 20px;
