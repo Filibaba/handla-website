@@ -10,7 +10,7 @@
   .hero {
     background: url('gfx/header.jpg') no-repeat center center;
     background-size: cover;
-    background-position-y: -400px;
+    background-position-y: -350px;
     background-color: #E9EAF0;
     min-height: 95vh;
     position: relative;
@@ -86,7 +86,7 @@
     padding: 32px;
     margin: 12px;
     max-width: 312px;
-    min-height: 240px;
+    min-height: 220px;
     display: inline-block;
     vertical-align: top;
     text-align: left;
