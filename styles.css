@@ -19,14 +19,14 @@
     min-height: 130vh;
   }
   
-    .hero img {
-      display: block;
-      position: absolute;
-      border: 1px solid red;
-      height: 130vh;
-      width: 100vw;
-      overflow: visible;
-      object-fit: cover;
+  .hero img {
+    display: block;
+    position: absolute;
+    height: 200vh;
+    width: 100vw;
+    margin-top: -480px;
+    overflow: visible;
+    object-fit: cover;
   }
   
 	.hero-iphone {
@@ -57,7 +57,6 @@
     align-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 160px;
   }
   .handla-logo {
     margin-top: 60px;
@@ -153,10 +152,6 @@
 	  background-color: rgba(120, 120, 128, 0.16);
     box-shadow:none;
   }
-  
-  .cards {
-    
-  }
 
   .bend {
     bottom: -1px;
@@ -170,6 +165,9 @@
     font-size: 0,6875em;
     text-align: center;
     color: #7f7f7f;
+    background-color: #fff;
+    margin-top: 40px; 
+    padding-bottom: 160px;
   }
   
   .copyright-notice {
