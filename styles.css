@@ -86,11 +86,11 @@
     padding: 32px;
     margin: 12px;
     max-width: 312px;
-    min-height: 220px;
+    min-height: 208px;
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    box-shadow:0 4px 16px rgba(0, 0, 0, 0.04);
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.06);
   }
   
   .card h1  {
@@ -101,6 +101,8 @@
     font-size: 1.125em;
     line-height: 25px;
     opacity: 0.7;
+    margin: 0;
+    padding: 0;
   }
   
   .button {
@@ -200,7 +202,7 @@
   /* Laptop */
   @media screen and (max-width: 1538px) {
 		.button { height: 50px; line-height: 50px; width: 264px; border-radius: 25px; font-size: 1.0625em;}
-	    .button-primary { margin-top: 24px;}
+    .button-primary { margin-top: 24px;}
     .button-secondary { margin-top: 12px;}
     
     .hero-iphone {()
@@ -225,6 +227,29 @@
       margin-top: 60px;
       width: 345.4px;
       height: 148px;
+    }
+    
+    .cards {
+      margin-top: 40px;
+    }
+    
+    .card {
+      border-radius: 24px;
+      padding: 24px;
+      margin: 10px;
+      max-width: 280px;
+      min-height: 200px;
+      box-shadow:0 4px 8px rgba(0, 0, 0, 0.06);
+    }
+    
+    .card h1  {
+      margin-top: 16px;
+      font-size: 1.125em;
+    }
+    
+    .card p {
+      font-size: 1em;
+      line-height: 24px;
     }
   }	 
 
