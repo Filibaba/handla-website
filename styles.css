@@ -9,7 +9,7 @@
     
   }
   body {
-    background-color: #E9EAF0;
+    background-color: #dee3f0;
   }
   .hero {
     z-index: -10;
@@ -188,7 +188,7 @@
   
   /* Dark Mode */
   @media (prefers-color-scheme: dark) {
-    body { background: #000; }
+    body { background: #1A1B20; }
     .wrapper { color: #fff; }
     .bend path { fill: #000; }
     .hero { background-image: url('gfx/header-dark.jpg'); background-color: #1A1B20; }
