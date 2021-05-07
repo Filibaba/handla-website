@@ -29,6 +29,7 @@
     margin-top: -40vh;
     overflow: visible;
     object-fit: cover;
+    background-repeat: no-repeat;
   }
   
 	.hero-iphone {
