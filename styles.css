@@ -237,10 +237,19 @@
     }
   }
   
-
 	  
+  /* Very tall & narrow */
+  @media screen and (max-width: 1538px) and (min-height: 1200px) {
+      .hero img {
+      height: 150vh;
+      width: 100vw;
+      margin-top: -30vh;
+    } 
+  }
+    	  
   /* Laptop */
   @media screen and (max-width: 1538px) {
+    
 		.button { height: 50px; line-height: 50px; width: 264px; border-radius: 25px; font-size: 1.0625em;}
     .button-primary { margin-top: 24px;}
     .button-secondary { margin-top: 12px;}
