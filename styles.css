@@ -62,6 +62,8 @@
     align-content: center;
     align-items: center;
     text-align: center;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
   .handla-logo {
     margin-top: 60px;
