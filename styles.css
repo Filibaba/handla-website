@@ -219,11 +219,25 @@
   )
   
   }
-  
-  /* Mobile Lanscape */
-  @media screen and (max-height: 567px) {
-    .hero {height: 200vh;}
+  /* Tablet landscape */
+  @media screen and (max-height: 920px) {   
+    .hero img {
+      height: 160vh;
+      width: 100vw;
+      margin-top: 0;
+    }
   }
+    
+  /* Mobile Lanscape */
+  @media screen and (max-height: 567px) {   
+    .hero img {
+      height: 300vh;
+      width: 100vw;
+      margin-top: 0;
+    }
+  }
+  
+
 	  
   /* Laptop */
   @media screen and (max-width: 1538px) {
@@ -282,6 +296,12 @@
   
   /* Mobile */
   @media screen and (max-width: 580px) {
+    .hero img {
+      height: 150vh;
+      width: 100vw;
+      margin-top: 0;
+    }
+    
     .vignette { font-size: 1.2em; }
     h2 { font-size: 1.8em; }
 		.hero {min-height: 100vh;}
