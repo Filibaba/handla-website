@@ -23,18 +23,18 @@
   </head>
   <body>
 
-    <div class="hero rellax" data-rellax-speed="-6">
+    <div class="hero">
         <picture>
         <source srcset="gfx/header-dark@2x.jpg" media="(prefers-color-scheme: dark)">
         <img src="gfx/header@2x.jpg">
     </div>
     
     <header>
-      <div class="wrapper rellax">
+      <div class="wrapper">
         
-        <img src="gfx/handla.svg" class="handla-logo rellax" data-rellax-speed="-5" alt="Handla" width="443px" height="185px">
+        <img src="gfx/handla.svg" class="handla-logo" alt="Handla" width="443px" height="185px">
         
-        <div class="hero-iphone rellax" data-rellax-speed="-1.5">
+        <div class="hero-iphone">
           <video class="video dark-video" autoplay muted loop playsinline>
     				<source src="video/web-EN-dark-small.mp4" width="265" height="696" type="video/mp4" media="(max-width:480px)">
     				<source src="video/web-EN-dark.mp4" width="265" height="696" type="video/mp4"/>
@@ -103,7 +103,7 @@
 
     
       
-    <footer class="rellax">
+    <footer>
       <div>
         <svg class="bend" width="1440px" height="51px" viewBox="0 0 1440 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -153,20 +153,5 @@
       }
       animateHeader();
     </script>
-    
-<!--
-    <script type="text/javascript" src="rellax.min.js"></script>
-    <script>
-//       if (window.innerWidth > 1366) {
-    	var rellax = new Rellax('.rellax', {
-        // center: true
-        callback: function(position) {
-            // callback every position change
-            console.log(position);
-        }
-      });
-//       }
-    </script>
--->
   </body>
 </html>
