@@ -12,7 +12,7 @@
     background-color: #E9EAF0;
   }
   .hero {
-    z-index: 0;
+    z-index: -10;
     position: absolute;
     width: 100vw;
     overflow: visible;
@@ -156,17 +156,16 @@
   .bend {
     bottom: -1px;
     height: auto;
-    position: absolute;
     width: 102vw;
     left: -1vw;
   }
+  
   footer {
     font: -apple-system-footnote;
     font-size: 0,6875em;
     text-align: center;
     color: #7f7f7f;
-    background-color: #fff;
-    margin-top: 40px; 
+    margin: 0;
     padding-bottom: 160px;
   }
   
