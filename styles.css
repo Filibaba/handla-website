@@ -10,6 +10,8 @@
   }
   body {
     background-color: #dee3f0;
+    padding: 0;
+    margin-bottom: -40px;
   }
   .hero {
     z-index: -10;
@@ -158,6 +160,8 @@
     height: auto;
     width: 102vw;
     left: -1vw;
+    margin-top: -1px;
+    margin-bottom: 16px;
   }
   
   footer {
@@ -165,8 +169,10 @@
     font-size: 0,6875em;
     text-align: center;
     color: #7f7f7f;
-    margin: 0;
-    padding-bottom: 160px;
+    margin-top: 80px;
+    padding-bottom: 64px;
+    overflow: hidden; 
+    background-color: white;
   }
   
   .copyright-notice {
@@ -190,7 +196,7 @@
   @media (prefers-color-scheme: dark) {
     body { background: #1A1B20; }
     .wrapper { color: #fff; }
-    .bend path { fill: #000; }
+    .bend path { fill: #1A1B20; }
     .hero { background-image: url('gfx/header-dark.jpg'); background-color: #1A1B20; }
     .dark-video { display: inline; }
     .light-video { display: none; }
@@ -204,6 +210,7 @@
       -webkit-filter: invert(1) drop-shadow( 0 0 32px rgba(0, 0, 0, 1));
       filter: invert(1)  drop-shadow( 0 0 32px rgba(0, 0, 0, 1));}
     .card { background-color: #27282E; }
+    footer { background-color: black;}
   )
   
   }
