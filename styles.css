@@ -138,6 +138,7 @@
     text-decoration: none;
     text-align: center;
 	  transition: 0.35s;
+	  margin-bottom: 8px;
   }
 
   .button-primary {
@@ -151,7 +152,6 @@
     color: black;
     background-color: white;
     box-shadow:0 1px 3px rgba(0, 0, 0, 0.16); 
-    margin-bottom: 8px;
   }
   
   .button-primary:hover {
@@ -193,6 +193,15 @@
   .copyright-notice {
     margin-left: 22vw;
     margin-right: 22vw;
+  }
+  
+  .copyright-notice a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .copyright-notice a:hover {
+    text-decoration: underline;
   }
   
   .plantry {
