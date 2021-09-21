@@ -32,6 +32,13 @@
     background-repeat: no-repeat;
   }
   
+  .download {
+    margin-top: -380px;
+    margin-left: 380px;
+  	position: absolute;
+  	display: inline-block;
+  }
+  
 	.hero-iphone {
 	  margin-top: 60px;
 	  margin-bottom: 80px;
