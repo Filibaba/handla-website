@@ -33,21 +33,20 @@
   }
   
   .download {
-    margin-top: -380px;
-    margin-left: 380px;
+    margin-top: -416px;
+    margin-left: 340px;
+    display: block;
+    overflow: visible;
   	position: absolute;
   	width: 194px;
   	height: 112px;
     transition: 0.35s;
-    border: 1px solid red;
   }
   
   .download-button {
   	width: 194px;
   	height: 112px;
     transition: 0.35s;
-    
-    border: 1px solid red;
   }
   
 	.hero-iphone {
@@ -82,7 +81,6 @@
     text-align: center;
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-    border: 1px solid orange;
   }
   .handla-logo {
     margin-top: 60px;
@@ -270,6 +268,26 @@
   )
   
   }
+  
+  /* Download button swap */
+  @media screen and (min-width: 1053px) {     
+    .download {
+      display: block;
+    }
+    .download-top {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1052px) {     
+    .download {
+      display: none;
+    }
+    .download-top {
+      display: block;
+    }
+  }
+  
   /* Tablet landscape */
   @media screen and (max-height: 920px) {   
     .hero img {
@@ -316,15 +334,14 @@
     }
     
     .download {
-      margin-top: -345px;
-      margin-left: 300px;
+      margin-top: -392px;
+      margin-left: 270px;
     	position: absolute;
     	width: 155.2px;
     	height: 89.6px;
     }
 
     .download-button {
-      
     	width: 155.2px;
     	height: 89.6px;
     }
