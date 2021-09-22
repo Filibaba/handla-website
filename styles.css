@@ -36,7 +36,18 @@
     margin-top: -380px;
     margin-left: 380px;
   	position: absolute;
-  	display: inline-block;
+  	width: 194px;
+  	height: 112px;
+    transition: 0.35s;
+    border: 1px solid red;
+  }
+  
+  .download-button {
+  	width: 194px;
+  	height: 112px;
+    transition: 0.35s;
+    
+    border: 1px solid red;
   }
   
 	.hero-iphone {
@@ -71,6 +82,7 @@
     text-align: center;
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+    border: 1px solid orange;
   }
   .handla-logo {
     margin-top: 60px;
@@ -290,6 +302,20 @@
       background-size: 247px 595px;
       background-repeat: no-repeat;
       background-position: center center;
+    }
+    
+    .download {
+      margin-top: -345px;
+      margin-left: 300px;
+    	position: absolute;
+    	width: 155.2px;
+    	height: 89.6px;
+    }
+
+    .download-button {
+      
+    	width: 155.2px;
+    	height: 89.6px;
     }
     
     .video {
