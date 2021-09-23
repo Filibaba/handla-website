@@ -251,6 +251,9 @@
     .dark-video { display: inline; }
     .light-video { display: none; }
     .plantry path { fill: #fff; }
+    .download-button {
+      -webkit-filter: invert(1);
+      filter: invert(1);}
     .button-primary {color: black; background-color: white;}
     .button-secondary {color: white; background-color: black; box-shadow: none;}
     .button-tertiary {color: white;}
