@@ -247,7 +247,7 @@
     body { background: #1A1B20; }
     .wrapper { color: #fff; }
     .bend path { fill: #1A1B20; }
-    .hero { background-image: url('gfx/header-dark.jpg'); background-color: #1A1B20; }
+    .hero { background-image: url('../gfx/header-dark.jpg'); background-color: #1A1B20; }
     .dark-video { display: inline; }
     .light-video { display: none; }
     .plantry path { fill: #fff; }
