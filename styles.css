@@ -223,11 +223,11 @@
   
   .copyright-notice a {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
   }
   
   .copyright-notice a:hover {
-    text-decoration: underline;
+    opacity: 0.7;
   }
   
   .plantry {
