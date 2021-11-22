@@ -216,14 +216,14 @@
     font-size: 11px;
     text-align: center;
     color: #7f7f7f;
-    padding-bottom: 64px;
+    padding-bottom: 8px;
     overflow: hidden; 
     background-color: white;
   }
   
   .copyright-notice {
-    margin-left: 22vw;
-    margin-right: 22vw;
+    margin-left: 16px;
+    margin-right: 16px;  
   }
   
   .copyright-notice a {
