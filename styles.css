@@ -115,7 +115,8 @@
   
   .cards {
     max-width: 1400px;
-    margin-top: 65px;
+    margin-top: 64px;
+    margin-bottom: 48px;
   }
   
   .card {
@@ -197,7 +198,7 @@
   .background-fade {
     background: linear-gradient(0deg, rgba(223,227,239,1) 0%, rgba(223,227,239,0) 100%);
     width: 100%;
-    margin-top: -200px;
+    margin-top: -280px;
     height: 280px;
   }
 
@@ -366,6 +367,7 @@
     
     .cards {
       margin-top: 40px;
+      margin-bottom: 32px;
     }
     
     .card {
@@ -443,6 +445,11 @@
       width: 300px;
       height: 123.4px;
     }
+    
+    .background-fade {
+      margin-top: -232px;
+      height: 280px;
+  }
   } 
 
   /* Mobile small */
