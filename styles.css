@@ -241,9 +241,9 @@
   }
   
   .plantry {
-    width: 220px;
-    height: auto;
-    margin: 40px;
+    width: 312px;
+    height: 122px;
+    margin: auto;
   }
   .makers {
     font-variant: small-caps;
@@ -260,7 +260,8 @@
     .hero { background-image: url('gfx/header-dark.jpg'); background-color: #1A1B20; }
     .dark-video { display: inline; }
     .light-video { display: none; }
-    .download-button, .plantry {
+    .plantry path { fill: #fff; }
+    .download-button {
       -webkit-filter: invert(1);
       filter: invert(1);}
     .button-primary {color: black; background-color: white;}
