@@ -116,7 +116,7 @@
   .cards {
     max-width: 1400px;
     margin-top: 64px;
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
   
   .card {
@@ -252,6 +252,116 @@
     top: 35px;
   }
   
+  
+  .invertInDarkMode {
+   -webkit-filter: invert(1);
+   filter: invert(1);    
+  }
+  
+  /* Awards */
+
+
+  .app-store-download {
+    display: block;
+    width: 194px;
+    height: 112px;
+    opacity: 1;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+  
+  .award-grid {
+    max-width: 1090px;
+    text-align: left;
+  }
+  
+  .award {
+  	background: url(gfx/award@2x.png);
+    background-size: 290px 142px;
+  	background-repeat: no-repeat;
+  	background-position-y: 35px;
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 35px;
+  	width: 290px;
+  	height: 178px;
+    text-align: center;
+  }
+  
+  
+  .award p {
+    margin-top: 98px;
+    font-weight: bold;
+    font-size: 1.125rem;
+  	height: 20px;
+  }
+  
+  .award h2 {
+    font-weight: normal;
+    font-size: 0.8125rem;
+  	opacity: 0.7;
+  	height: 20px;
+  	margin-top: 33px;
+  }
+  
+  .articlequote {
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 35px;
+  	width: 290px;
+    text-align: left;
+  }
+  
+  .articlequote p {
+    margin-top: 0;
+    margin-bottom: 0;
+  	font-size: 18px;
+  	color: #4D4D4D;
+    line-height: 1.5;
+  }
+  
+  .articlequote b {
+    color: black;
+  }
+  
+  .review-grid {
+    max-width: 1090px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  .review {
+  	position: relative;
+  	display: inline-block;
+  	vertical-align: top;
+  	margin: 35px;
+  	width: 290px;
+    text-align: left;
+  }
+  
+  .review p {
+    margin-top: 16px;
+    margin-bottom: 0;
+  	font-size: 18px;
+  	color: #4D4D4D;
+    line-height: 1.5;
+  }
+  
+  .review b {
+    color: black;
+  }
+  
+  .review h2 {
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    opacity: 0.5;
+    text-align: left;
+  }
+  
   /* Dark Mode */
   @media (prefers-color-scheme: dark) {
     body { background: #1A1B20; }
@@ -277,6 +387,31 @@
     .background-fade { background: linear-gradient(0deg, rgba(26,27,32,1) 0%, rgba(26,27,32,0) 100%); }
     footer { background-color: black;}
     .copyright-notice a { color: white; }
+    
+  
+    .award {
+    	background: url(gfx/awardDarkMode@2x.png);
+      background-size: 290px 142px;
+    	background-repeat: no-repeat;
+    	background-position-y: 35px;
+    }
+   
+    .articlequote p {
+      color: #8C8C8C;
+    }
+    
+    .articlequote b {
+      color: white;
+    }
+    
+    .review p {
+      color: #8C8C8C;
+    }
+    
+    .review b {
+      color: white;
+    }
+    
   )
   
   }
