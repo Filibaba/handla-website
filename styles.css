@@ -34,7 +34,7 @@
   
   .download {
     margin-top: -1132px;
-    margin-left: 636px;
+    margin-left: 736px;
     display: block;
     overflow: visible;
   	position: absolute;
@@ -45,6 +45,17 @@
   
   .download-button {
   	width: 194px;
+  	height: 112px;
+    transition: 0.35s;
+  }
+  
+  .download-qr {
+    margin-top: -1132px;
+    margin-left: -836px;
+    display: block;
+    overflow: visible;
+  	position: absolute;
+  	width: 112px;
   	height: 112px;
     transition: 0.35s;
   }
@@ -371,7 +382,7 @@
     .hero { background-image: url('gfx/header-dark.jpg'); background-color: #1A1B20; }
     .dark-video { display: inline; }
     .light-video { display: none; }
-    .download-button, .plantry {
+    .download-button, .plantry, .download-qr {
       -webkit-filter: invert(1);
       filter: invert(1);}
     .button-primary {color: black; background-color: white;}
@@ -419,7 +430,7 @@
   
   /* Download button swap */
   @media screen and (min-width: 1053px) {     
-    .download {
+    .download, .download-qr {
       display: block;
     }
     .download-top {
@@ -428,7 +439,7 @@
   }
 
   @media screen and (max-width: 1052px) {     
-    .download {
+    .download, .download-qr {
       display: none;
     }
     .download-top {
@@ -471,11 +482,14 @@
     	  
   /* Laptop */
   @media screen and (max-width: 1538px) {
-    
-
+  
+  
     .download {
-      margin-top: -1112px;
-    	position: absolute;
+      margin-left: 636px;
+    }
+
+    .download-qr {
+      margin-left: -686px;    
     }
 
     .cards {
