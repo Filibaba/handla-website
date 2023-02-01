@@ -27,7 +27,7 @@
   <body>
     
 
-    <div class="hero">
+    <div class="hero rellax" data-rellax-speed="-5">
         <picture>
         <source srcset="gfx/header-dark@2x.jpg" media="(prefers-color-scheme: dark)">
         <img src="gfx/header@2x.jpg">
@@ -202,5 +202,10 @@
       }
       animateHeader();
     </script>
+    <script src="js/rellax.min.js"></script>
+    <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+    </script>   
   </body>
 </html>
