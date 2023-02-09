@@ -26,7 +26,7 @@
   </head>
   <body>
 
-    <div class="hero rellax" data-rellax-speed="-5">
+    <div class="hero rellax" data-rellax-speed="-5" id="headerimage">
         <picture>
         <source srcset="../gfx/header-dark@2x.jpg" media="(prefers-color-scheme: dark)">
         <img src="../gfx/header@2x.jpg">
@@ -207,5 +207,14 @@
     // Accepts any class name
     var rellax = new Rellax('.rellax');
     </script>   
+    
+    <script>
+      window.addEventListener('scroll', function() {
+        let num = (window.scrollY/window.innerHeight)*30;
+  
+        document.getElementById('headerimage').style.webkitFilter = 'blur(' + num + 'px)'
+      })
+    </script>    
+    
   </body>
 </html>
