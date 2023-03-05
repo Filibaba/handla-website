@@ -241,6 +241,7 @@
   .copyright-notice {
     margin-left: 16px;
     margin-right: 16px;  
+    padding-bottom: env(safe-area-inset-bottom);
   }
   
   .copyright-notice a {
