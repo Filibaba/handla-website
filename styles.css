@@ -370,25 +370,43 @@ html:lang(ja),
 .tagline span.active { top: 0; opacity: 1; }
 .tagline span.goingAway { top: -1em; opacity: 0; }
 
+/* As on plantry.app: the pill button, a line on the price, and the QR code in a tile under it. */
 .hero-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
+  text-align: center;
   margin: 32px 0 8px;
 }
 
-.download-button { display: block; width: 194px; height: 112px; }
-.download-qr img { display: block; }
+.hero-cta .button { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16); }
 
-@media (prefers-color-scheme: dark) {
-  .download-button, .download-qr img, .plantry { filter: invert(1); }
+.hero-free-hint {
+  font-size: 13px;
+  line-height: 1.25;
+  color: var(--text-secondary);
+  margin: 16px auto 28px;
 }
 
-/* No phone to scan a code from on a phone. */
+.download-qr {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.download-qr img { display: block; }
+.download-qr:active, .hero-cta .button:active { opacity: 0.7; }
+
+@media (prefers-color-scheme: dark) {
+  .plantry { filter: invert(1); }
+  .hero-cta .button { box-shadow: none; }
+  .download-qr { background: rgba(255, 255, 255, 0.1); box-shadow: none; }
+  .download-qr img { filter: invert(1); mix-blend-mode: screen; }
+}
+
+/* No phone to scan a code from on a phone or tablet. */
 @media (max-width: 1052px) {
   .download-qr { display: none; }
-  .download-button { width: 155px; height: 90px; }
+  .hero-free-hint { margin-bottom: 8px; }
 }
 
 @media (max-width: 567px) {
@@ -397,6 +415,8 @@ html:lang(ja),
   .hero-iphone { height: 480px; margin: -8px auto -16px; }
   .hero h1 { font-size: 34px; }
   .hero-sub { font-size: 18px; }
+  .hero-cta { margin-top: 24px; padding: 0 24px; }
+  .hero-cta .button { width: 100%; height: 48px; line-height: 48px; border-radius: 24px; font-size: 18px; }
   /* The rotating word gets its own line, so the longest one still fits a phone. */
   .tagline { display: block; overflow: hidden; }
   .tagline span { left: 0; right: 0; }
