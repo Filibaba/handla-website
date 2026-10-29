@@ -308,6 +308,18 @@ html:lang(ja),
   margin: -24px auto 0;
 }
 
+/* Sized as on plantry.app: larger on big screens, and on laptops the logo and phone shrink so
+   the headline shows above the fold. */
+@media (min-width: 1600px) {
+  .hero-iphone { width: 630px; height: 840px; }
+}
+
+@media (max-width: 1538px) and (max-height: 1024px) {
+  .hero { padding-top: 64px; }
+  .handla-logo { width: 220px; }
+  .hero-iphone { width: 460px; height: 620px; margin-top: -16px; }
+}
+
 .hero-spline {
   display: block;
   width: 100%;
@@ -342,6 +354,10 @@ html:lang(ja),
   font-size: 56px;
   line-height: 1.1;
   margin: 0 0 12px;
+}
+
+@media (max-width: 1538px) and (max-height: 1024px) {
+  .hero h1 { font-size: 48px; }
 }
 
 .hero-sub {
