@@ -430,9 +430,14 @@ section h2 {
 
 .card img {
   display: block;
-  width: 64px;
-  height: 64px;
-  margin: 0 0 8px -4px;
+  width: 60px;
+  height: 60px;
+  margin: 0 0 14px;
+}
+
+/* The white tiles need an edge to stand off a white card. */
+@media (prefers-color-scheme: light) {
+  .card .tile-outline { border-radius: 14px; box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06); }
 }
 
 .card h3 {
