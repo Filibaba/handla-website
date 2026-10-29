@@ -18,7 +18,20 @@ if (floatingNav) {
 
 // ── Rotating word in the headline ────────────────────────────────────────────
 (function rotateTagline() {
-  const words = Array.from(document.querySelectorAll('.tagline span'));
+  const tagline = document.querySelector('.tagline');
+  if (!tagline) return;
+  const words = Array.from(tagline.querySelectorAll('span'));
+
+  // On a phone the word has a line of its own and the box spans it; elsewhere the box
+  // is as wide as the word showing.
+  const fit = () => {
+    const inline = getComputedStyle(tagline).display === 'inline-block';
+    tagline.style.width = inline ? words[0].offsetWidth + 'px' : '';
+  };
+  fit();
+  document.fonts.ready.then(fit);
+  window.addEventListener('resize', fit, { passive: true });
+
   if (words.length < 2 || reducedMotion) return;
   setInterval(() => {
     words[0].classList.remove('active');
@@ -26,6 +39,7 @@ if (floatingNav) {
     words[1].classList.add('active');
     words[words.length - 1].classList.remove('goingAway');
     words.push(words.shift());
+    fit();
   }, 2000);
 }());
 
