@@ -1,4 +1,24 @@
-# Short URLs for the App Store support and privacy fields
+# Short URLs for the App Store support and privacy fields, in every language
 /support /support.html 200
 /privacy /privacy.html 200
+/se/support /se/support.html 200
+/se/privacy /se/privacy.html 200
+/de/support /de/support.html 200
+/de/privacy /de/privacy.html 200
+/no/support /no/support.html 200
+/no/privacy /no/privacy.html 200
+/dk/support /dk/support.html 200
+/dk/privacy /dk/privacy.html 200
+/nl/support /nl/support.html 200
+/nl/privacy /nl/privacy.html 200
+/fr/support /fr/support.html 200
+/fr/privacy /fr/privacy.html 200
+/es/support /es/support.html 200
+/es/privacy /es/privacy.html 200
+/fi/support /fi/support.html 200
+/fi/privacy /fi/privacy.html 200
+/is/support /is/support.html 200
+/is/privacy /is/privacy.html 200
+/jp/support /jp/support.html 200
+/jp/privacy /jp/privacy.html 200
 /privacypolicy.html /privacy.html 301
