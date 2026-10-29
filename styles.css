@@ -1,600 +1,573 @@
-  html, body {
-    margin: 0;
-    padding-bottom: 32px;
-    color: #000;
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    
-  }
-  body {
-    background-color: #dee3f0;
-    padding: 0;
-    margin-bottom: -40px;
-  }
-  .hero {
-    z-index: -10;
-    position: absolute;
-    width: 100vw;
-    overflow: visible;
-    min-height: 130vh;
-  }
-  
-  .hero img {
-    display: block;
-    position: absolute;
-    height: 200vh;
-    width: 100vw;
-    margin-top: -48vh;
-    overflow: visible;
-    object-fit: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .download {
-    margin-top: -1132px;
-    margin-left: 736px;
-    display: block;
-    overflow: visible;
-  	position: absolute;
-  	width: 194px;
-  	height: 112px;
-    transition: 0.35s;
-  }
-  
-  .download-button {
-  	width: 194px;
-  	height: 112px;
-    transition: 0.35s;
-  }
-  
-  .download-qr {
-    margin-top: -1132px;
-    margin-left: -836px;
-    display: block;
-    overflow: visible;
-  	position: absolute;
-  	width: 112px;
-  	height: 112px;
-    transition: 0.35s;
-  }
-    
-  .hero-iphone {
-    height: 638px;
- 	  width: 313px;
-    background: url(gfx/hero-iphone@2x.png);
-    background-size: 313px 638px;
-  	background-repeat: no-repeat;
-  	background-position: center center;
-  	margin: 40px 0px 80px 0px;
-    transition: 0.35s;
-  }
-  
-  .dark-video {
-    display: none;
-  }
-    
-  .video {
-    height: 610px;
-    width: 281px;
-    margin-top: 14px;
-  	border-radius: 30px;
-    transition: 0.35s;
-  }
-  
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 95%;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-  .handla-logo {
-    margin-top: 48px;
-    width: 443px;
-    height: 185px;
-    transition: 0.35s;
-  }
-  .vignette {
-    font-size: 1.8em;
-    margin: 0 0 1vw 0;
-    transition: 0.35s;
-  }
-  h2 {
-    font-weight: bold;
-    font-size: 48px;
-    margin: 0 4vw;
-  }
-  .tagline {
-    display: inline;
-    position: relative;
-  }
-  .tagline span {
-    position: absolute;
-    top: 1.25em;
-    right: 0;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-  }
-  .tagline span:first-child { position: relative; }
-  .tagline span.active { top: 0; opacity: 1; }
-  .tagline span.goingAway { top: -1em; opacity: 0; }
-  
-  .cards {
-    max-width: 1400px;
-    margin-top: 64px;
-    margin-bottom: 0;
-  }
-  
-  .card {
-    transition: 0.35s; 
-    background-color: white;
-    border-radius: 32px;
-    padding: 32px;
-    margin: 12px 12px 16px 12px;
-    max-width: 312px;
-    min-height: 208px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    box-shadow:0 4px 8px rgba(0, 0, 0, 0.06);
-  }
-  
-  .card h1  {
-    font-size: 24px;
-  }
-  
-  .card p {
-    font-size: 18px;
-    line-height: 25px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .buttons {
-    max-width: 364px;
-    text-align: center;
-  }
-  
-  .button {
-    display: inline-block;
-    height: 60px;
-    line-height: 60px;
-    width: 334px;
-    border-radius: 30px;
-    font-size: 22px;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-	  transition: 0.15s;
-	  margin-bottom: 8px;
-  }
+/* Handla — handlagrocerylist.app
+   One stylesheet for the home, support and privacy pages, in every language. The floating nav,
+   language menu and 3D phone follow plantry.app; the rest stays Handla's own: a soft blue-grey
+   page, white cards and the bend into the footer. */
 
-  .button-primary {
-    margin-top: 40px;
-    color: white;
-    background-color: black;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.16); 
-  }
-  
-  .button-secondary {
-    margin-top: 16px;
-    color: black;
-    background-color: white;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.16); 
-  }
-  
-  .button-tertiary {
-    margin-top: 16px;
-    color: black;
-  }
-  
-  .button-primary:hover {
-	  background-color: #676772;		  
-    box-shadow:none;
-  }
-	
-  .button-secondary:hover {
-	  background-color: rgba(120, 120, 128, 0.16);
-    box-shadow:none;
-  }
-  
-  .button-tertiary:hover {
-	  background-color: rgba(120, 120, 128, 0.16);
-  }
-  
-  header a:active {
-    opacity: 0.7;
-  }
-  
-  .background-fade {
-    background: linear-gradient(0deg, rgba(223,227,239,1) 0%, rgba(223,227,239,0) 100%);
-    width: 100%;
-    margin-top: -280px;
-    height: 280px;
-  }
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
-  .bend {
-    bottom: -1px;
-    height: auto;
-    width: 102vw;
-    left: -1vw;
-    margin-top: -1px;
-    margin-bottom: 16px;
-  }
-  
-  footer {
-    font: -apple-system-footnote;
-    font-size: 11px;
-    text-align: center;
-    color: #7f7f7f;
-    padding-bottom: 8px;
-    overflow: hidden; 
-    background-color: white;
-  }
-  
-  .copyright-notice {
-    margin-left: 16px;
-    margin-right: 16px;  
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  
-  .copyright-notice a {
-    color: black;
-    text-decoration: underline;
-  }
-  
-  .copyright-notice a:hover {
-    opacity: 0.7;
-  }
-  
-  .plantry {
-    width: 220px;
-    height: auto;
-    margin: 40px;
-  }
-  .makers {
-    font-variant: small-caps;
-    letter-spacing: 5.5px;
-    position: relative;
-    top: 35px;
-  }
-  
-  
-  .invertInDarkMode {
-   -webkit-filter: invert(1);
-   filter: invert(1);    
-  }
-  
-  /* Awards */
+:root {
+  --page: #dee3f0;
+  --card: #ffffff;
+  --text: #000000;
+  --text-secondary: rgba(0, 0, 0, 0.62);
+  --footer: #ffffff;
+  --accent: #8a3ffc;
+}
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #1a1b20;
+    --card: #27282e;
+    --text: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.62);
+    --footer: #000000;
+  }
+}
 
-  .app-store-download {
-    display: block;
-    width: 194px;
-    height: 112px;
-    opacity: 1;
-    margin-bottom: 2rem;
-    margin-top: 0;
-  }
-  
-  .award-grid {
-    max-width: 1090px;
-    text-align: left;
-  }
-  
-  .award {
-  	background: url(gfx/award@2x.png);
-    background-size: 290px 142px;
-  	background-repeat: no-repeat;
-  	background-position-y: 35px;
-  	position: relative;
-  	display: inline-block;
-  	vertical-align: top;
-  	margin: 35px;
-  	width: 290px;
-  	height: 178px;
-    text-align: center;
-  }
-  
-  
-  .award p {
-    margin-top: 98px;
-    font-weight: bold;
-    font-size: 1.125rem;
-  	height: 20px;
-  }
-  
-  .award h2 {
-    font-weight: normal;
-    font-size: 0.8125rem;
-  	opacity: 0.7;
-  	height: 20px;
-  	margin-top: 33px;
-  }
-  
-  .articlequote {
-  	position: relative;
-  	display: inline-block;
-  	vertical-align: top;
-  	margin: 35px;
-  	width: 290px;
-    text-align: left;
-  }
-  
-  .articlequote p {
-    margin-top: 0;
-    margin-bottom: 0;
-  	font-size: 18px;
-  	color: #4D4D4D;
-    line-height: 1.5;
-  }
-  
-  .articlequote b {
-    color: black;
-  }
-  
-  .review-grid {
-    max-width: 1090px;
-    margin-bottom: 0;
-    text-align: left;
-  }
-  
-  .review {
-  	position: relative;
-  	display: inline-block;
-  	vertical-align: top;
-  	margin: 35px;
-  	width: 290px;
-    text-align: left;
-  }
-  
-  .review p {
-    margin-top: 16px;
-    margin-bottom: 0;
-  	font-size: 18px;
-  	color: #4D4D4D;
-    line-height: 1.5;
-  }
-  
-  .review b {
-    color: black;
-  }
-  
-  .review h2 {
-    font-weight: normal;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    opacity: 0.5;
-    text-align: left;
-  }
-  
-  /* Dark Mode */
-  @media (prefers-color-scheme: dark) {
-    body { background: #1A1B20; }
-    .wrapper { color: #fff; }
-    .bend path { fill: #1A1B20; }
-    .hero { background-image: url('gfx/header-dark.jpg'); background-color: #1A1B20; }
-    .dark-video { display: inline; }
-    .light-video { display: none; }
-    .download-button, .plantry, .download-qr {
-      -webkit-filter: invert(1);
-      filter: invert(1);}
-    .button-primary {color: black; background-color: white;}
-    .button-secondary {color: white; background-color: black; box-shadow: none;}
-    .button-tertiary {color: white;}
-    .button-primary:hover { background-color: rgba(255, 255, 255, 0.6); }
-  	.button-secondary:hover { background-color: rgba(120, 120, 128, 0.16);}
-  	.button-tertiary:hover { background-color: rgba(120, 120, 128, 0.16);}
-  	.hero-iphone { background: url(gfx/hero-iphone-dark@2x.png); background-size: 313px 638px; background-repeat: no-repeat; background-position: center center; }
-    .handla-logo {  
-      -webkit-filter: invert(1) drop-shadow( 0 0 32px rgba(0, 0, 0, 1));
-      filter: invert(1)  drop-shadow( 0 0 32px rgba(0, 0, 0, 1));}
-    .card { background-color: #27282E; }
-    .background-fade { background: linear-gradient(0deg, rgba(26,27,32,1) 0%, rgba(26,27,32,0) 100%); }
-    footer { background-color: black;}
-    .copyright-notice a { color: white; }
-    
-  
-    .award {
-    	background: url(gfx/awardDarkMode@2x.png);
-      background-size: 290px 142px;
-    	background-repeat: no-repeat;
-    	background-position-y: 35px;
-    }
-   
-    .articlequote p {
-      color: #8C8C8C;
-    }
-    
-    .articlequote b {
-      color: white;
-    }
-    
-    .review p {
-      color: #8C8C8C;
-    }
-    
-    .review b {
-      color: white;
-    }
-    
-  )
-  
-  }
-  
-  /* Download button swap */
-  @media screen and (min-width: 1053px) {     
-    .download, .download-qr {
-      display: block;
-    }
-    .download-top {
-      display: none;
-    }
-  }
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
 
-  @media screen and (max-width: 1052px) {     
-    .download, .download-qr {
-      display: none;
-    }
-    .download-top {
-      display: block;
-      margin-top: 40px;
-    }
-    .download-button {
-    	width: 155.2px;
-    	height: 89.6px;
-    }
-  }
-  
-  /* Tablet landscape */
-  @media screen and (max-height: 920px) {   
-    .hero img {
-      height: 160vh;
-      width: 100vw;
-      margin-top: 0;
-    }
-  }
-    
-  /* Mobile Lanscape */
-  @media screen and (max-height: 567px) {   
-    .hero img {
-      height: 300vh;
-      width: 100vw;
-      margin-top: 0;
-    }
-  }
-  
-	  
-  /* Very tall & narrow */
-  @media screen and (max-width: 1538px) and (min-height: 1200px) {
-      .hero img {
-      height: 150vh;
-      width: 100vw;
-      margin-top: -24vh;
-    } 
-  }
-    	  
-  /* Laptop */
-  @media screen and (max-width: 1538px) {
-  
-  
-    .download {
-      margin-left: 636px;
-    }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  text-align: center;
+  overflow-x: hidden;
+}
 
-    .download-qr {
-      margin-left: -686px;    
-    }
+a { color: inherit; }
 
-    .cards {
-      margin-top: 40px;
-      margin-bottom: 0;
-    }
-    
-    .card {
-      border-radius: 24px;
-      padding: 24px;
-      margin: 10px 10px 18px 10px;
-      max-width: 280px;
-      min-height: 216px;
-      box-shadow:0 4px 8px rgba(0, 0, 0, 0.06);
-    }
-    
-    .card h1  {
-      margin-top: 16px;
-      font-size: 22px;
-    }
-    
-    .card p {
-      font-size: 17px;
-      line-height: 24px;
-    }
-  }	 
+/* Japanese: name the Japanese faces and break lines by Japanese rules. */
+html:lang(ja),
+.nav-lang-menu a:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic UI", "Yu Gothic", YuGothic, Meiryo, "Noto Sans JP", sans-serif;
+  line-break: strict;
+}
+:lang(ja) :is(h1, h2, h3) { word-break: auto-phrase; }
 
-  
-  /* Mobile */
-  @media screen and (max-width: 580px) {
-    .hero img {
-      height: 150vh;
-      width: 100vw;
-      margin-top: 0;
-    }
-    
-    .buttons { margin-left: 24px; margin-right: 24px;}
-		.button { height: 48px; line-height: 48px; width: 100%; border-radius: 24px; font-size: 18px;}
-    .button-primary { margin-top: 24px;}
-    .button-secondary { margin-top: 12px;}
-    
-    .vignette { font-size: 19px; }
-    h2 { font-size: 27px; }
-		.hero {min-height: 100vh;}
+/* Finnish and Icelandic compounds run long enough to overflow a phone-width heading. */
+:lang(fi) :is(h1, h2, h3),
+:lang(is) :is(h1, h2, h3) {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
 
-    .cards {
-      margin-left: 24px;
-      margin-right: 24px;
-      margin-top: 40px;
-    }
-    
-    .card {
-      border-radius: 24px;
-      padding: 16px 16px 32px 16px;
-      max-width: none;
-      min-height: 0;
-      margin: 16px 0px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-    }    
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 
-    .handla-logo {
-      margin-top: 20px;
-      width: 300px;
-      height: 123.4px;
-    }
-    
-    .hero-iphone {
-    	margin: 16px 0px 56px 0px;
-    }
-    
-    .background-fade {
-      margin-top: -232px;
-      height: 280px;
-  }
-  } 
+/* ── Floating navigation ──────────────────────────────────────────────────────
+   Transparent over the hero; once the logo scrolls away it becomes a glass pill. */
+.floating-nav {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 32px);
+  max-width: calc(100vw - 32px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 8px 8px 20px;
+  border-radius: 100px;
+  border: 0.5px solid transparent;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, max-width 0.5s ease;
+}
 
-  /* Mobile small */
-  @media screen and (max-width: 320px) {
-    .vignette { font-size: 19px; }
-    h2 { font-size: 23px; }
-    .button-primary { margin-top: 16px;}
-    .button-secondary { margin-top: 8px;}
-    
-    .card h1  {
-      margin-top: 16px;
-      font-size: 18px;
-    }
-    
-    .card p {
-      font-size: 1em;
-      line-height: 24px;
-    }  
+.floating-nav.is-scrolled {
+  max-width: 980px;
+  background: rgba(242, 242, 247, 0.72);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.floating-nav-logo {
+  display: block;
+  height: 30px;
+  width: auto;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.floating-nav.is-scrolled .floating-nav-logo { opacity: 1; }
+
+.floating-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.floating-nav-link {
+  color: #1c1c1e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+.floating-nav-link:hover { background-color: rgba(0, 0, 0, 0.06); }
+.floating-nav-link[aria-current="page"] { background-color: rgba(0, 0, 0, 0.08); }
+
+.floating-nav-cta {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  background-color: #1c1c1e;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+.floating-nav-cta:hover { background-color: #3a3a3c; }
+
+.nav-show-mobile { display: none; }
+.nav-hide-mobile { display: inline; }
+
+@media (max-width: 767px) {
+  .nav-hide-mobile { display: none; }
+  .nav-show-mobile { display: inline; }
+}
+
+@media (max-width: 567px) {
+  .nav-jump { display: none; }
+  .floating-nav-logo { display: none; }
+  .floating-nav-links { width: 100%; justify-content: center; gap: 8px; }
+  .floating-nav-link { padding: 8px 10px; }
+  .floating-nav-cta { padding: 10px 14px; }
+  /* Blur is too GPU-expensive on phones; a more opaque fill reads the same. */
+  .floating-nav.is-scrolled {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(242, 242, 247, 0.94);
   }
-  
-  /* Desktop */
-  @media screen and (min-width: 1538px) {
-    .vignette { font-size: 40px; }
-    h2 { font-size: 64px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .floating-nav.is-scrolled {
+    background: rgba(28, 28, 36, 0.72);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   }
-  
-  /* Retina images */
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 429px), (min-resolution: 192dpi) and (min-width: 429px) {
-/*     .hero { background-image: url('gfx/header@2x.jpg'); } */
+  .floating-nav-logo { filter: invert(1); }
+  .floating-nav-link { color: white; }
+  .floating-nav-link:hover { background-color: rgba(255, 255, 255, 0.1); }
+  .floating-nav-link[aria-current="page"] { background-color: rgba(255, 255, 255, 0.16); }
+  .floating-nav-cta { background-color: white; color: black; }
+  .floating-nav-cta:hover { background-color: rgba(255, 255, 255, 0.85); }
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 567px) {
+  .floating-nav.is-scrolled { background: rgba(28, 28, 36, 0.94); }
+}
+
+/* ── Language menu ────────────────────────────────────────────────────────────
+   A <details>: it opens on click and works before any JavaScript runs. */
+.nav-lang { position: relative; }
+
+.nav-lang > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.nav-lang > summary::-webkit-details-marker { display: none; }
+.nav-lang > summary::marker { content: ""; }
+
+.nav-lang-chevron {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.nav-lang[open] .nav-lang-chevron { transform: rotate(180deg); }
+.nav-lang:not([open]) > .nav-lang-menu { display: none; }
+
+.nav-lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  padding: 6px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.nav-lang-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: #1c1c1e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Every row reserves the tick's width, so the list doesn't shift between languages. */
+.nav-lang-menu a::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  flex: none;
+}
+
+.nav-lang-menu a:hover { background-color: rgba(0, 0, 0, 0.06); }
+
+.nav-lang-menu a[aria-current="true"]::before {
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M1.8 6.3l2.9 2.9 5.5-6.1' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / 12px 12px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M1.8 6.3l2.9 2.9 5.5-6.1' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / 12px 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-lang-menu {
+    background: rgba(28, 28, 36, 0.86);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   }
-  @media (prefers-color-scheme: dark) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 429px), (prefers-color-scheme: dark) and (min-resolution: 192dpi) and (min-width: 429px) {
-/*     .hero { background-image: url('gfx/header-dark@2x.jpg'); } */
-  }
+  .nav-lang-menu a { color: white; }
+  .nav-lang-menu a:hover { background-color: rgba(255, 255, 255, 0.12); }
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: 80px 16px 24px;
+  overflow: hidden;
+}
+
+/* The produce photograph behind the hero, fading into the page colour at its foot. */
+.hero-bg {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 280px;
+  background: linear-gradient(to bottom, transparent, var(--page));
+}
+
+.handla-logo {
+  display: block;
+  width: 300px;
+  height: auto;
+  margin: 8px auto 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .handla-logo { filter: invert(1) drop-shadow(0 0 32px rgba(0, 0, 0, 1)); }
+}
+
+.hero-iphone {
+  position: relative;
+  width: 560px;
+  max-width: 100%;
+  height: 760px;
+  margin: -24px auto -32px;
+}
+
+.hero-spline {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.spline-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.spline-loader.is-hidden { opacity: 0; }
+
+.spline-loader-spinner {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top-color: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  animation: spline-spin 0.8s linear infinite;
+}
+
+@keyframes spline-spin { to { transform: rotate(360deg); } }
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.hero-sub {
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* The rotating word in the headline. */
+.tagline {
+  display: inline-block;
+  position: relative;
+}
+
+.tagline span {
+  position: absolute;
+  top: 1.25em;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.tagline span:first-child { position: relative; }
+.tagline span.active { top: 0; opacity: 1; }
+.tagline span.goingAway { top: -1em; opacity: 0; }
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 32px 0 8px;
+}
+
+.download-button { display: block; width: 194px; height: 112px; }
+.download-qr img { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  .download-button, .download-qr img, .plantry { filter: invert(1); }
+}
+
+/* No phone to scan a code from on a phone. */
+@media (max-width: 1052px) {
+  .download-qr { display: none; }
+  .download-button { width: 155px; height: 90px; }
+}
+
+@media (max-width: 567px) {
+  .hero { padding-top: 72px; }
+  .handla-logo { width: 220px; }
+  .hero-iphone { height: 480px; margin: -8px auto -16px; }
+  .hero h1 { font-size: 34px; }
+  .hero-sub { font-size: 18px; }
+  /* The rotating word gets its own line, so the longest one still fits a phone. */
+  .tagline { display: block; overflow: hidden; }
+  .tagline span { left: 0; right: 0; }
+}
+
+/* ── Features ─────────────────────────────────────────────────────────────── */
+section h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 72px 16px 32px;
+}
+
+#features, #faq { scroll-margin-top: 90px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: left;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 28px;
+  padding: 24px 24px 28px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 0 8px -4px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.card p {
+  font-size: 17px;
+  line-height: 1.45;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 567px) {
+  section h2 { font-size: 30px; margin-top: 56px; }
+  .cards { padding: 0 16px; gap: 12px; }
+  .card { border-radius: 24px; }
+}
+
+/* ── FAQ and other prose ──────────────────────────────────────────────────── */
+.about-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px 8px;
+  text-align: left;
+}
+
+.about-inner h2 { margin-left: 0; margin-right: 0; }
+
+.about-inner p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+
+.about-inner h3 {
+  font-size: 20px;
+  margin: 28px 0 8px;
+}
+
+/* Answers sit back a little from their questions. */
+.about-inner h3 + p,
+.about-inner h3 + p ~ p { color: var(--text-secondary); }
+
+.about-inner a { color: inherit; text-decoration: underline; }
+
+.buttons { margin: 40px auto 0; padding: 0 24px; }
+
+.button {
+  display: inline-block;
+  width: 334px;
+  max-width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.button-primary { color: white; background: black; }
+.button-primary:hover { background: #3a3a3c; }
+
+@media (prefers-color-scheme: dark) {
+  .button-primary { color: black; background: white; }
+  .button-primary:hover { background: rgba(255, 255, 255, 0.8); }
+}
+
+/* ── Footer ───────────────────────────────────────────────────────────────── */
+footer {
+  margin-top: 96px;
+  padding: 0 16px calc(24px + env(safe-area-inset-bottom));
+  background: var(--footer);
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+.bend {
+  display: block;
+  width: calc(100% + 32px);
+  height: 51px;
+  margin: 0 -16px;
+  fill: var(--page);
+}
+
+.makers {
+  font-variant: small-caps;
+  letter-spacing: 5.5px;
+  margin: 24px 0 0;
+}
+
+.plantry { width: 180px; height: auto; margin: 16px 0 24px; }
+
+.footer-links { font-size: 14px; }
+.footer-links a, .copyright a { color: var(--text); }
+.apple-notice { max-width: 640px; margin: 8px auto 0; line-height: 1.5; }
+
+/* ── Text pages (support, privacy) ────────────────────────────────────────── */
+.page-head {
+  padding: 132px 24px 16px;
+}
+
+.page-head h1 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.page-head p {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.contact-card {
+  max-width: 640px;
+  margin: 32px auto 8px;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--card);
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card h2 { font-size: 22px; margin: 0 0 8px; }
+.contact-card p { font-size: 17px; line-height: 1.55; margin: 0 0 8px; }
+
+.prose .about-inner h2 { font-size: 30px; margin: 48px 0 8px; }
+
+@media (max-width: 567px) {
+  .page-head { padding: 104px 20px 8px; }
+  .page-head h1 { font-size: 34px; }
+  .contact-card { margin: 24px 16px 8px; }
+}

@@ -1,0 +1,4 @@
+# Short URLs for the App Store support and privacy fields
+/support /support.html 200
+/privacy /privacy.html 200
+/privacypolicy.html /privacy.html 301
