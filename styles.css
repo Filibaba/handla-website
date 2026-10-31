@@ -404,9 +404,9 @@ html:lang(ja),
 /* The largest size, as on plantry.app. The logo's artwork sits inside empty space in the SVG, so
    its margins pull that space out; its visible width matches Plantry's logo. */
 @media (min-width: 1539px) {
-  .hero { padding-top: 112px; }
+  .hero { padding-top: 84px; }
   .handla-logo { width: 443px; margin: -30px auto 0; }
-  .hero-iphone { margin-top: -32px; }
+  .hero-iphone { margin-top: -20px; }
   .hero h1 { font-size: 64px; font-weight: 800; margin-bottom: 8px; }
   .hero-cta { margin-top: 40px; }
   .hero-cta .button { font-size: 22px; }
@@ -590,6 +590,15 @@ section h2 {
 .about-inner h3 + p ~ p { color: var(--text-secondary); }
 
 .about-inner a { color: inherit; text-decoration: underline; }
+
+/* The largest size steps the type up, as on plantry.app. */
+@media (min-width: 1539px) {
+  section h2 { font-size: 45px; }
+  .card h3 { font-size: 24px; margin-bottom: 14px; }
+  .card p { font-size: 18px; line-height: 25px; }
+  .duo-lead { font-size: 22.5px; }
+  .about-inner p { font-size: 20px; }
+}
 
 .buttons { margin: 40px auto 0; padding: 0 24px; }
 
