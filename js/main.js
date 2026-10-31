@@ -16,6 +16,29 @@ if (floatingNav) {
   }
 }
 
+// ── Hero photograph: drifts and goes out of focus as you scroll ──────────────
+// Wider screens only, as on plantry.app: blurring it on a phone costs more than it shows.
+(function focusHero() {
+  const hero = document.querySelector('.hero');
+  const photo = document.querySelector('.hero-bg img');
+  if (!hero || !photo) return;
+  let queued = false;
+  const update = () => {
+    queued = false;
+    const y = window.scrollY, width = window.innerWidth, height = window.innerHeight;
+    if (width < 568) { photo.style.transform = photo.style.filter = ''; return; }
+    const blur = y / height * 30;
+    // The scale keeps the blur's soft edge off the sides of the page.
+    const drift = reducedMotion ? 0 : y * 500 / (hero.offsetHeight + height);
+    photo.style.transform = `translate3d(0, ${drift}px, 0) scale(${1 + 3 * blur / width})`;
+    photo.style.filter = `blur(${blur}px)`;
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue, { passive: true });
+  update();
+}());
+
 // ── 3D phone: follows the cursor a little and tips back as you scroll ────────
 let viewportW = window.innerWidth, viewportH = window.innerHeight, scrollY = window.scrollY;
 let mouseX = 0, mouseY = 0, smoothX = 0, smoothY = 0;
