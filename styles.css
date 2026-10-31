@@ -438,7 +438,7 @@ section h2 {
   margin: 72px 16px 32px;
 }
 
-#features, #faq { scroll-margin-top: 90px; }
+#features, #faq, #terms { scroll-margin-top: 90px; }
 
 /* The feature grid follows plantry.app: three columns, then two, then one, with each phone straight
    on the page under its text. The widths and phone sizes are the ones Plantry uses. */
