@@ -393,7 +393,6 @@ html:lang(ja),
   margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 .download-qr img { display: block; }
 .download-qr:active, .hero-cta .button:active { opacity: 0.7; }
@@ -401,7 +400,7 @@ html:lang(ja),
 @media (prefers-color-scheme: dark) {
   .plantry { filter: invert(1); }
   .hero-cta .button { box-shadow: none; }
-  .download-qr { background: rgba(255, 255, 255, 0.1); box-shadow: none; }
+  .download-qr { background: rgba(255, 255, 255, 0.1); }
   .download-qr img { filter: invert(1); mix-blend-mode: screen; }
 }
 
