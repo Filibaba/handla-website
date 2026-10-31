@@ -361,35 +361,12 @@ html:lang(ja),
 }
 
 .hero-sub {
-  font-size: 21px;
-  line-height: 1.4;
+  font-size: 32px;
+  line-height: 1.25;
   color: var(--text-secondary);
-  max-width: 560px;
+  max-width: 1100px;
   margin: 0 auto;
 }
-
-/* The rotating word in the headline. */
-/* The words stack on top of each other; main.js sizes the box to the word showing,
-   so "Grocery List" slides along and the headline stays centred. */
-.tagline {
-  display: inline-block;
-  position: relative;
-  height: 1.1em;
-  vertical-align: top;
-  white-space: nowrap;
-  transition: width 0.3s ease-in-out;
-}
-
-.tagline span {
-  position: absolute;
-  top: 1.25em;
-  left: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.tagline span.active { top: 0; opacity: 1; }
-.tagline span.goingAway { top: -1em; opacity: 0; }
 
 /* As on plantry.app: the pill button, a line on the price, and the QR code in a tile under it. */
 .hero-cta {
@@ -424,6 +401,17 @@ html:lang(ja),
   .download-qr img { filter: invert(1); mix-blend-mode: screen; }
 }
 
+/* The largest size, as on plantry.app. The logo's artwork sits inside empty space in the SVG, so
+   its margins pull that space out; its visible width matches Plantry's logo. */
+@media (min-width: 1539px) {
+  .hero { padding-top: 112px; }
+  .handla-logo { width: 443px; margin: -30px auto 0; }
+  .hero-iphone { margin-top: -32px; }
+  .hero h1 { font-size: 64px; font-weight: 800; margin-bottom: 8px; }
+  .hero-cta { margin-top: 40px; }
+  .hero-cta .button { font-size: 22px; }
+}
+
 /* No phone to scan a code from on a phone or tablet. */
 @media (max-width: 1052px) {
   .download-qr { display: none; }
@@ -438,9 +426,6 @@ html:lang(ja),
   .hero-sub { font-size: 18px; }
   .hero-cta { margin-top: 24px; padding: 0 24px; }
   .hero-cta .button { width: 100%; height: 48px; line-height: 48px; border-radius: 24px; font-size: 18px; }
-  /* The rotating word gets its own line, so the longest one still fits a phone. */
-  .tagline { display: block; overflow: hidden; }
-  .tagline span { left: 0; right: 0; }
 }
 
 /* ── Features ─────────────────────────────────────────────────────────────── */
