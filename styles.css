@@ -543,6 +543,9 @@ section h2 {
   margin: 24px auto 24px;
 }
 
+/* Room before the FAQ, which otherwise starts right under the bands. */
+.watch-section { padding-bottom: 72px; }
+
 @media (max-width: 1538px) {
   .cards { max-width: 1100px; }
   .card { flex-basis: 330px; max-width: 330px; margin: 12px; }
