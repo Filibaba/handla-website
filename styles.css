@@ -530,6 +530,19 @@ section h2 {
   margin: 0 auto 24px;
 }
 
+/* ── Apple Watch ──────────────────────────────────────────────────────────── */
+/* Three watches from the App Store slides, bands fading out top and bottom (transparent PNG, so
+   one image serves light and dark). */
+.watch-section { margin-top: 56px; }
+
+.watch-trio {
+  display: block;
+  width: 100%;
+  max-width: 804px;
+  height: auto;
+  margin: 24px auto 24px;
+}
+
 @media (max-width: 1538px) {
   .cards { max-width: 1100px; }
   .card { flex-basis: 330px; max-width: 330px; margin: 12px; }
