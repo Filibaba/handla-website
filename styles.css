@@ -533,31 +533,27 @@ section h2 {
 .duo-section + .duo-section { margin-top: 56px; }
 
 /* ── Apple Watch ──────────────────────────────────────────────────────────── */
-/* Three watches from the App Store slides, with their full bands (transparent PNG, so
-   one image serves light and dark). */
+/* Three watches from the App Store slides, each its own image with its full band
+   (transparent, so one image serves light and dark): side by side, or stacked on a phone,
+   where three in a row came out too small to read. */
 .watch-trio {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px auto;
+}
+.watch-trio img {
   display: block;
-  width: 100%;
-  max-width: 804px;
+  width: 252px;
   height: auto;
-  margin: 24px auto 24px;
 }
 
 /* Room before the FAQ, which otherwise starts right under the bands. */
 .watch-section { padding-bottom: 72px; }
 
-/* On a phone the three watches side by side came out a third of a screen wide each, their
-   screens too small to read: the strip grows to 640 pt, scrolls sideways, and opens on the
-   middle watch with the other two peeking in at the edges (js/main.js centres it). */
 @media (max-width: 640px) {
-  .watch-scroll {
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    margin: 0 -16px;
-  }
-  .watch-scroll::-webkit-scrollbar { display: none; }
-  .watch-trio { width: 640px; max-width: none; }
+  .watch-trio { flex-direction: column; align-items: center; gap: 8px; }
+  .watch-trio img { width: min(280px, 78vw); }
 }
 
 @media (max-width: 1538px) {
@@ -618,6 +614,35 @@ section h2 {
 .about-inner h3 + p ~ p { color: var(--text-secondary); }
 
 .about-inner a { color: inherit; text-decoration: underline; }
+
+/* The FAQ's answers fold away under their questions, so the section reads as a list of
+   questions rather than a wall of text; a tap opens one. */
+.faq-item { border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent); }
+.faq-item:last-of-type { border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent); }
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 { margin: 0; }
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text-secondary);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { color: var(--text-secondary); }
+.faq-item > :last-child { margin-bottom: 20px; }
+.faq-item + h3 { margin-top: 36px; }
 
 /* The largest size steps the type up, as on plantry.app. */
 @media (min-width: 1539px) {
