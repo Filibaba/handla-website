@@ -552,7 +552,9 @@ section h2 {
 /* Room before the FAQ, which otherwise starts right under the bands. */
 .watch-section { padding-bottom: 72px; }
 
-@media (max-width: 640px) {
+/* Stacked wherever three side by side (804 wide) don't fit, the unfolded iPhone Duo included:
+   side by side they pushed the page sideways there. */
+@media (max-width: 859px) {
   .watch-trio { flex-direction: column; align-items: center; gap: 48px; }
   .watch-trio img { width: min(280px, 78vw); }
 }
