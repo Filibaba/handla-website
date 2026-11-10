@@ -72,3 +72,14 @@ let lastRx = null, lastRy = null;
   }
   requestAnimationFrame(tilt);
 }());
+
+// The Apple Watch strip scrolls sideways on a phone: open it on the middle watch.
+(function () {
+  function centre() {
+    document.querySelectorAll('.watch-scroll').forEach(function (s) {
+      if (s.scrollWidth > s.clientWidth) s.scrollLeft = (s.scrollWidth - s.clientWidth) / 2;
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', centre); else centre();
+  window.addEventListener('load', centre);
+})();

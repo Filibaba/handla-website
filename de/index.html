@@ -33,7 +33,7 @@
     <meta name="theme-color" content="#dee3f0" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1A1B20" media="(prefers-color-scheme: dark)">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=watch2">
     <link rel="shortcut icon" href="../gfx/handla-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/handla-favicon.png">
     <script type="application/ld+json">
@@ -244,10 +244,12 @@
   <section class="duo-section watch-section">
     <h2>Gemacht für die Apple Watch</h2>
     <p class="duo-lead"><span>Deine Listen am Handgelenk.</span> <span>Hake im Laden ab und füge per Sprache mehr hinzu.</span></p>
-    <picture>
-      <source type="image/webp" srcset="../gfx/watch-trio-de.webp 1x, ../gfx/watch-trio-de@2x.webp 2x">
-      <img class="watch-trio" src="../gfx/watch-trio-de.png" srcset="../gfx/watch-trio-de@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="804" height="396" alt="Handla auf der Apple Watch: alle Listen, eine Einkaufsliste und Diktieren">
-    </picture>
+    <div class="watch-scroll">
+      <picture>
+        <source type="image/webp" srcset="../gfx/watch-trio-de.webp 1x, ../gfx/watch-trio-de@2x.webp 2x">
+        <img class="watch-trio" src="../gfx/watch-trio-de.png" srcset="../gfx/watch-trio-de@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="804" height="396" alt="Handla auf der Apple Watch: alle Listen, eine Einkaufsliste und Diktieren">
+      </picture>
+    </div>
   </section>
 
   <section id="faq">
@@ -304,7 +306,7 @@
     <p class="apple-notice">Apple, das Apple Logo, iPad und iPhone sind Marken der Apple Inc. App Store ist eine Dienstleistungsmarke der Apple Inc. Plantry und Filibaba sind in der EU eingetragene Marken der Filibaba AB. <a href="../de/privacy.html">Datenschutzerklärung →</a></p>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=watch2"></script>
   <script src="../js/lang-menu.js"></script>
   <script type="module" src="../js/spline-init.js"></script>
   </body>

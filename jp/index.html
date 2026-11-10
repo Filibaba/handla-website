@@ -33,7 +33,7 @@
     <meta name="theme-color" content="#dee3f0" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1A1B20" media="(prefers-color-scheme: dark)">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=watch2">
     <link rel="shortcut icon" href="../gfx/handla-favicon.png">
     <link rel="apple-touch-icon" href="../gfx/handla-favicon.png">
     <script type="application/ld+json">
@@ -244,10 +244,12 @@
   <section class="duo-section watch-section">
     <h2>Apple Watchに対応</h2>
     <p class="duo-lead"><span>リストが手首に。</span> <span>お店でチェックして、声で追加も。</span></p>
-    <picture>
-      <source type="image/webp" srcset="../gfx/watch-trio-jp.webp 1x, ../gfx/watch-trio-jp@2x.webp 2x">
-      <img class="watch-trio" src="../gfx/watch-trio-jp.png" srcset="../gfx/watch-trio-jp@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="804" height="396" alt="Apple WatchのHandla：すべてのリスト、買い物リスト、音声入力">
-    </picture>
+    <div class="watch-scroll">
+      <picture>
+        <source type="image/webp" srcset="../gfx/watch-trio-jp.webp 1x, ../gfx/watch-trio-jp@2x.webp 2x">
+        <img class="watch-trio" src="../gfx/watch-trio-jp.png" srcset="../gfx/watch-trio-jp@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="804" height="396" alt="Apple WatchのHandla：すべてのリスト、買い物リスト、音声入力">
+      </picture>
+    </div>
   </section>
 
   <section id="faq">
@@ -304,7 +306,7 @@
     <p class="apple-notice">Apple、Appleロゴ、iPad、iPhoneはApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。PlantryとFilibabaはFilibaba ABの商標で、EUで登録されています。 <a href="../jp/privacy.html">プライバシーポリシー →</a></p>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=watch2"></script>
   <script src="../js/lang-menu.js"></script>
   <script type="module" src="../js/spline-init.js"></script>
   </body>

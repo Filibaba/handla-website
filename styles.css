@@ -520,7 +520,7 @@ section h2 {
 }
 
 /* Each sentence wraps as one unit, so a line breaks between sentences rather than inside one. */
-.duo-lead span { display: inline-block; }
+.duo-lead span { display: inline-block; text-wrap: balance; }
 
 .duo-folded {
   display: block;
@@ -545,6 +545,20 @@ section h2 {
 
 /* Room before the FAQ, which otherwise starts right under the bands. */
 .watch-section { padding-bottom: 72px; }
+
+/* On a phone the three watches side by side came out a third of a screen wide each, their
+   screens too small to read: the strip grows to 640 pt, scrolls sideways, and opens on the
+   middle watch with the other two peeking in at the edges (js/main.js centres it). */
+@media (max-width: 640px) {
+  .watch-scroll {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -16px;
+  }
+  .watch-scroll::-webkit-scrollbar { display: none; }
+  .watch-trio { width: 640px; max-width: none; }
+}
 
 @media (max-width: 1538px) {
   .cards { max-width: 1100px; }

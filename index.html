@@ -33,7 +33,7 @@
     <meta name="theme-color" content="#dee3f0" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1A1B20" media="(prefers-color-scheme: dark)">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=watch2">
     <link rel="shortcut icon" href="gfx/handla-favicon.png">
     <link rel="apple-touch-icon" href="gfx/handla-favicon.png">
     <script type="application/ld+json">
@@ -244,10 +244,12 @@
   <section class="duo-section watch-section">
     <h2>Made for Apple Watch</h2>
     <p class="duo-lead"><span>Your lists on your wrist.</span> <span>Check off as you shop, and add more by voice.</span></p>
-    <picture>
-      <source type="image/webp" srcset="gfx/watch-trio.webp 1x, gfx/watch-trio@2x.webp 2x">
-      <img class="watch-trio" src="gfx/watch-trio.png" srcset="gfx/watch-trio@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="804" height="396" alt="Handla on Apple Watch: all your lists, a grocery list and dictation">
-    </picture>
+    <div class="watch-scroll">
+      <picture>
+        <source type="image/webp" srcset="gfx/watch-trio.webp 1x, gfx/watch-trio@2x.webp 2x">
+        <img class="watch-trio" src="gfx/watch-trio.png" srcset="gfx/watch-trio@2x.png 2x" fetchpriority="low" loading="lazy" decoding="async" width="804" height="396" alt="Handla on Apple Watch: all your lists, a grocery list and dictation">
+      </picture>
+    </div>
   </section>
 
   <section id="faq">
@@ -304,7 +306,7 @@
     <p class="apple-notice">Apple, the Apple logo, iPad and iPhone are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Plantry and Filibaba are trademarks of Filibaba AB, registered in the EU. <a href="privacy.html">Privacy Policy →</a></p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=watch2"></script>
   <script src="js/lang-menu.js"></script>
   <script type="module" src="js/spline-init.js"></script>
   </body>
