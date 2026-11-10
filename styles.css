@@ -630,16 +630,19 @@ section h2 {
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary h3 { margin: 0; }
+/* A chevron, pointing down while folded and up when open. */
 .faq-item summary::after {
-  content: "+";
+  content: "";
   flex: none;
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 1;
-  color: var(--text-secondary);
-  transition: transform 0.2s ease;
+  width: 9px;
+  height: 9px;
+  margin: 0 4px 5px 0;
+  border-right: 2px solid var(--text-secondary);
+  border-bottom: 2px solid var(--text-secondary);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease, margin 0.2s ease;
 }
-.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item[open] summary::after { transform: rotate(-135deg); margin-bottom: -5px; }
 .faq-item p { color: var(--text-secondary); }
 .faq-item > :last-child { margin-bottom: 20px; }
 .faq-item + h3 { margin-top: 36px; }
