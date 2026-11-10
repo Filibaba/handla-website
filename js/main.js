@@ -3,6 +3,7 @@
 const floatingNav   = document.getElementById('floatingNav');
 const headerLogo    = document.querySelector('.handla-logo');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const touchScreen   = window.matchMedia('(any-pointer: coarse)').matches;
 
 // ── Nav: a glass pill once the big logo has scrolled away ────────────────────
 // Pages without the hero logo (support, privacy) keep the pill from the start.
@@ -17,7 +18,8 @@ if (floatingNav) {
 }
 
 // ── Hero photograph: drifts and goes out of focus as you scroll ──────────────
-// Wider screens only, as on plantry.app: blurring it on a phone costs more than it shows.
+// Wider screens only, as on plantry.app: blurring it on a phone costs more than it shows. Not on
+// touch screens at any width either (iPad, iPhone Duo unfolded), where the photo just sits still.
 (function focusHero() {
   const hero = document.querySelector('.hero');
   const photo = document.querySelector('.hero-bg img');
@@ -26,7 +28,7 @@ if (floatingNav) {
   const update = () => {
     queued = false;
     const y = window.scrollY, width = window.innerWidth, height = window.innerHeight;
-    if (width < 568) { photo.style.transform = photo.style.filter = ''; return; }
+    if (width < 568 || touchScreen) { photo.style.transform = photo.style.filter = ''; return; }
     const blur = y / height * 30;
     // The scale keeps the blur's soft edge off the sides of the page.
     const drift = reducedMotion ? 0 : y * 500 / (hero.offsetHeight + height);
