@@ -514,7 +514,8 @@ section h2 {
 
 .duo-lead {
   max-width: 680px;
-  margin: 0 auto;
+  /* Air before the picture under it, as on Plantry's page (its paragraphs carry 0.9em). */
+  margin: 0 auto 18px;
   font-size: 20px;
   line-height: 1.4;
   color: var(--text-secondary);
