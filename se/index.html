@@ -59,11 +59,11 @@
       "mainEntity": [
         { "@type": "Question", "name": "Är Handla gratis?", "acceptedAnswer": { "@type": "Answer", "text": "Handla är gratis att hämta och använda för en lista med upp till tio varor. Handla Premium, en prenumeration i appen med 7 dagars gratis provperiod, tar bort gränsen och ger dig hur många listor du vill och obegränsat med sparade recept. Priset visas alltid i appen innan du bestämmer dig, och du kan avsluta när du vill." } },
         { "@type": "Question", "name": "Hur sorterar Handla min lista?", "acceptedAnswer": { "@type": "Answer", "text": "Varje vara du lägger till hamnar i rätt avdelning, som Frukt & grönt, Mejeri eller Bröd, så att du går igenom butiken en gång i stället för att sicksacka fram och tillbaka. Du kan dra avdelningarna i samma ordning som i din egen butik." } },
-        { "@type": "Question", "name": "Visar Handla matens klimatpåverkan?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. En prick vid varje livsmedel visar om utsläppen av växthusgaser är låga, medelhöga eller höga, med siffran i kilo CO₂e per kilo. Siffrorna kommer från CONCITO:s Big Climate Database." } },
+        { "@type": "Question", "name": "Visar Handla matens klimatpåverkan?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. En prick vid varje vara visar dess klimatpåverkan: grön för låg, gul för medel och röd för hög. Tryck på pricken för att se varans siffra, till exempel ungefär 0,4 kg CO₂e per kilo för potatis. Livsmedel bedöms efter CONCITO:s stora klimatdatabas, och hushållsvaror efter vilken sorts vara de är." } },
         { "@type": "Question", "name": "Kan jag klistra in eller skriva en hel lista för hand?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Klistra in en lista från Anteckningar eller ett meddelande, eller skriv den, så gör Handla varje rad till en vara i rätt avdelning. Med Apple Pencil kan du skriva listan för hand i stället." } },
         { "@type": "Question", "name": "Kan jag lägga till varor med rösten?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Tryck på mikrofonen och säg vad du behöver, gärna flera saker på en gång. Varje vara hamnar på listan med sin mängd. Det fungerar på Apple Watch också." } },
         { "@type": "Question", "name": "Kan jag dela eller skriva ut en lista?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Skicka en lista som text till vem du vill, i Meddelanden, Mail eller någon annan app, eller skriv ut den. Recept och hela måltidsplaner kan delas som en länk och skrivas ut med eller utan bilder för att spara bläck. Delning skickar en kopia, så listan hålls inte synkad mellan personer." } },
-        { "@type": "Question", "name": "Kan Handla följa min kost?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Välj Vegansk, Vegetarisk eller Glutenfri under Inställningar › Kostpreferenser, så föreslår Handla recept som passar. Vegansk och Vegetarisk håller också det du inte äter borta från förslagen när du skriver. Dina egna recept göms aldrig." } },
+        { "@type": "Question", "name": "Kan Handla följa min kost?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Välj Veganskt, Vegetariskt eller Glutenfritt när du börjar använda Handla, eller senare under Inställningar › Kostpreferenser, så följer receptförslagen efter. Veganskt och Vegetariskt begränsar också vilka varor Handla föreslår, medan Glutenfritt låter varorna vara. Dina egna recept och favoriter visas alltid, och skriver eller säger du en varas hela namn läggs den ändå till." } },
         { "@type": "Question", "name": "Kan jag lägga till ett recept i inköpslistan?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Lägg till ett recept i en lista så hamnar ingredienserna direkt där, sorterade efter avdelning och anpassade efter hur många ni är. Receptet ligger kvar på listan som din måltidsplan, redo när det är dags att laga mat." } },
         { "@type": "Question", "name": "Kan jag spara recept från webbsidor, Instagram och TikTok?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Klistra in en länk till en receptsida, en Instagram-reel eller en TikTok, eller dela den till Handla från Safari eller appen, så sparar Handla receptet med ingredienser och steg." } },
         { "@type": "Question", "name": "Kan jag skriva egna recept?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Skriv ett recept från början, eller ändra i ett du har sparat. Handla har också en samling vegetariska recept att börja med." } },
@@ -272,6 +272,7 @@
       <h2>En inköpslista som sorterar åt dig</h2>
       <p>Handla är en inköpslista för iPhone, iPad och iPhone Duo. Skriv några bokstäver, välj ett förslag, så hamnar varan i rätt avdelning med en egen illustration. Bocka av medan du handlar, så blir listan kortare för varje steg genom butiken.</p>
       <p>Vet du redan vad du ska laga? Lägg till receptet i stället. Ingredienserna hamnar på listan, och receptet väntar där som din måltidsplan, med timer inbyggd i stegen för när du börjar laga mat.</p>
+      <p>Berätta hur du äter, veganskt, vegetariskt eller glutenfritt, så följer föreslagna recept och varor efter. En prick vid varje vara visar dess klimatpåverkan, bedömd efter CONCITO:s stora klimatdatabas.</p>
 
       <details class="faq-item">
         <summary><h3>Är Handla gratis?</h3></summary>
@@ -285,7 +286,7 @@
 
       <details class="faq-item">
         <summary><h3>Visar Handla matens klimatpåverkan?</h3></summary>
-        <p>Ja. En prick vid varje livsmedel visar om utsläppen av växthusgaser är låga, medelhöga eller höga, med siffran i kilo CO₂e per kilo. Siffrorna kommer från CONCITO:s Big Climate Database.</p>
+        <p>Ja. En prick vid varje vara visar dess klimatpåverkan: grön för låg, gul för medel och röd för hög. Tryck på pricken för att se varans siffra, till exempel ungefär 0,4 kg CO₂e per kilo för potatis. Livsmedel bedöms efter CONCITO:s stora klimatdatabas, och hushållsvaror efter vilken sorts vara de är.</p>
       </details>
 
       <details class="faq-item">
@@ -305,7 +306,7 @@
 
       <details class="faq-item">
         <summary><h3>Kan Handla följa min kost?</h3></summary>
-        <p>Ja. Välj Vegansk, Vegetarisk eller Glutenfri under Inställningar › Kostpreferenser, så föreslår Handla recept som passar. Vegansk och Vegetarisk håller också det du inte äter borta från förslagen när du skriver. Dina egna recept göms aldrig.</p>
+        <p>Ja. Välj Veganskt, Vegetariskt eller Glutenfritt när du börjar använda Handla, eller senare under Inställningar › Kostpreferenser, så följer receptförslagen efter. Veganskt och Vegetariskt begränsar också vilka varor Handla föreslår, medan Glutenfritt låter varorna vara. Dina egna recept och favoriter visas alltid, och skriver eller säger du en varas hela namn läggs den ändå till.</p>
       </details>
 
       <details class="faq-item">
